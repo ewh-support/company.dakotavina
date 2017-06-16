@@ -1,0 +1,108 @@
+/*THIS STYLESHEET IS FOR MEDIA = PRINT*/
+
+body { background: #ffffff !important; }
+
+.noprint { display: none !important; }
+
+#setlocation {display: none;}
+.locationseton {display: none;}
+.locationsetoff {display: none;}
+
+.noscreen {display: inline;}
+
+.box_left {display: none;}
+ 
+.mainbody {width: 100%;}
+
+.header {width: 100%;}
+
+.site-branding {
+	width: 90px;
+	height: 90px;
+	background-image: none;
+}
+
+.header-strap { color: #ababab !important; text-align: right !important; }
+
+.header-phone a { color: #ababab !important; padding: 7px; }
+
+.parallax-window { height: 110px !important; overflow: hidden; background-color: #ffffff; background-image: url('images/clinical.jpg'); background-attachment: initial; background-position: center center; background-size:cover; }
+
+.parallax-mirror, .parallax-slider { display: none !important; }
+
+.site-header-wrap, .site-header-wrap  { min-height: auto; height: 110px !important; overflow: hidden; }
+
+.site-description, .home-description, .header-desc-wrap, .site-title h1, .home-title { padding: 0; margin: 0; }
+
+.header-desc-wrap { display: none; }
+
+.genre-links, .header-link, .header-scroll, .page-scroll {display: none !important;}
+
+.searchbox {display: none;}
+
+.menupanel {display:none;}
+
+.contenttoplinks {display: none;}
+
+.locationcontainer {display: none;}
+
+.column-grid {width: 48%; float: left; margin-right: 1%; }
+
+.button-pane {display:none;}
+
+.button_print, #showmore, #showless {display:none;}
+
+.quicklinkspanel {display:none;}
+
+.quicksearch {display: none;}
+
+#controlform {display: none;}
+
+#searchform {display: none;}
+
+#menuitems {display: none;}
+
+#listmenu {display: none;}
+
+#listad {display: none;}
+
+.adminwelcome {display: none;}
+
+.itemsheader, .itemsperpage, .itemsfooter { display: none; }
+
+.tbl { width: 100%; }
+.thr { display: table-cell; width: auto; font-weight: bold; }
+.tdr { display: table-cell; width: auto; }
+.tableheader { display: table-row; }
+.tabledesc { background: transparent; border-radius: 0; text-align: left; }
+.row-spacer { display: none; }
+
+.product_navigation {display: none;}
+#descriptioncontent, #specificationcontent, #clpcontent {display: block;}
+#reviewscontent {display: none;}
+
+.qtybox, .button_basket, .button_display, .button-buy-online, .button-learn-more {display: none;}
+
+#search-form {display: none;}
+
+.mapcontainer {display: none;}
+
+#certificatecontainer { margin: 0; font-size: 0.65em; }
+
+.fiftiethcontainer  {display: none;}
+
+.contactcontainer {display: none;}
+
+.printfooter { display: block; border-top: 1px solid #999999; text-align: center; font-size: 0.7em; }
+
+.copyrightpanel { background: #ffffff; color: #555555; margin: 0; padding: 0; }
+
+.webmaster { display: none; }
+
+.copyright { width: 100%; text-align: center; margin: 0; padding: 0; color: #555555; font-size: 0.75em; }
+.copyright a { color: #555555; text-decoration: none; }
+
+hr { clear: both; height: 1px; background: #818181; border: 0 none; }
+
+.stButton {display: none !important;}
+#sthoverbuttons {display: none !important;}
