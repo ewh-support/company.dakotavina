@@ -1,0 +1,2182 @@
+html { font-size: 100%; height: 100% !important; }
+
+body {
+	font-family: arial, verdana, tahoma, helvetica, sans-serif;
+	color: #555555;
+	background: #323232; 
+	margin: 0;
+	list-style-position: inside;
+	height: 100% !important;
+}
+
+@font-face {
+    font-family: 'roboto-light';
+    src: url('fonts/roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+sup { vertical-align: top; font-size: 0.7em; }
+
+#ssl-img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+	width: 114px;
+	height: 56px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#ssl-img img {
+	margin: 0 !important;	
+}
+
+.button:disabled, .button_large:disabled, .button_submit:disabled, .button_house:disabled, .button_house_large:disabled { background: #999999; }
+
+.g-recaptcha { display: inline-block; }
+
+.language-button, .language-button-selected { float: right; width: 40px; height: 40px; margin: 5px; padding: 0; border: 2px transparent solid; border-radius: 50%; cursor: pointer; text-decoration: none !important; color: transparent; background-position: center center; background-repeat: no-repeat; }
+.language-button:hover, .language-button-selected { border: 2px solid #E21013; }
+
+@media all and ( max-width: 330px ) {
+	.g-recaptcha
+	{
+	    max-width: 250px;
+	}
+	.button_submit, .button_large, .button_listing, .button_red_large { font-size: 1.2em; padding: 10px; }
+}
+
+.parallax-window:after {
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.parallax-window > * {
+    position:relative;
+    z-index:2;
+}
+
+#parallax-home { min-height: 100vh; position: relative; }
+
+.genre-links { width: 100%; position: relative; }
+
+ul.panel-links { display: table; width: 100%; list-style-type: none; margin: 0; padding: 0; }
+ul.panel-links li { width: 100%; display: table-cell; float: left; margin: 0; padding: 0; }
+
+.panel-link-pane { display: block; color: #ffffff; background: #1F232C; text-align: center; margin: 0; padding: 0; border: 0 none; box-sizing: border-box; border-radius: 0; }
+
+.panel-link-heading { font-size: 1rem; text-transform: uppercase; font-weight: bold; margin-bottom: 0.25rem; }
+.panel-link-text { font-size: 0.8rem; }
+
+.panel-link-image { position: relative; overflow: hidden; border-radius: 0; }
+
+.panel-link-image>img { display: block; width: 100%; }
+
+.panel-link-image>div {
+	position: absolute;
+	z-index: 10;
+	top: 100%;
+	height: 100%;
+	width: 100%;
+	padding: 10% 5% 0 5%;
+    box-sizing: border-box;
+	overflow-y: auto;
+	background-color: rgba(0,0,0, 0.7);
+	color: #ffffff;
+    transition: all 0.75s ease-in-out;
+    -webkit-transition: all 0.75s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 0.75s ease-in-out; /** Firefox **/
+    -o-transition: all 0.75s ease-in-out; /** Opera **/
+}
+
+.panel-link-pane:hover>.panel-link-image>div {
+	transform: translate(0,-100%);
+    -webkit-transform: translate(0,-100%);
+    -o-transform: translate(0,-100%); 
+    -moz-transform: translate(0,-100%);
+}
+
+.panel-link-pane.selected>.panel-link-image::before,
+.panel-link-pane:hover>.panel-link-image::before {
+  content: '';
+  position: absolute;
+  z-index: 15;
+  left: calc(50% - 20px);
+  background-color: #ffffff;
+  width: 40px;
+  height: 15px;
+  top: 0;
+
+  /* The points are: (left top: x y, right top: x y, center bottom: x y) */
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.panel-link-image>div a { display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 10; color: transparent; text-decoration: none; }
+
+.warning { color: #E21013; }
+
+.bold { font-weight: bold; }
+
+.titlecase {text-transform:capitalize; }
+
+.strong {font-weight: bold; }
+
+.clickable {cursor: pointer; }
+
+.slider-heading { margin-bottom: 50px; }
+.slider { position: relative; }
+
+.slide { background: transparent; }
+.slide-image { margin: 0 4% 0 0; }
+.slide-title { height: 1.8em; overflow: hidden; font-size: 0.9em; font-weight: bold; white-space: normal; margin: 0 4% 0 0; padding: 5px 0; }
+.slide-body { max-height: 60px; overflow: hidden; font-size: 0.9em; white-space: normal; margin: 0 4% 0 0; padding: 5px 0; }
+
+.slide-button { padding: 5px 0; }
+.slide-datestamp { font-size: 0.9em; color: #999999; font-style: italic; margin: 0; padding: 5px 0; }
+
+.slide-pager { position: absolute; top: -40px; right: 2%; z-index: 10; }
+.slide-pager span { color: transparent; font-size: 24px; margin: 3px; text-decoration: none !important; text-align: center; padding: 3px 12px; background: transparent url('https://www.tcsbiosciences.co.uk/images/slidenavbg.png') center -32px no-repeat; }
+.slide-pager span:hover { background-position: center top; cursor: pointer; }
+.slide-pager span.cycle-pager-active { background-position: center top !important; }
+.slide-pager span.cycle-pager-active:hover { background-position: center top !important; }
+
+.slider-heading { margin-bottom: 50px; }
+.slider { position: relative; }
+
+.clppictogram { height: 50px; width: 48px; float: left; margin: 0 5px 5px 0; padding: 0; background-image: url('https://www.tcsbiosciences.co.uk/images/clp_pictograms_50h.png'); background-repeat: no-repeat; }
+
+#clpI {background-position: 0 0;}
+#clpH {background-position: -49px 0px;}
+#clpT {background-position: -97px 0px;}
+#clpC {background-position: -146px 0px;}
+#clpE {background-position: -194px 0px;}
+#clpX {background-position: -243px 0px;}
+#clpF {background-position: -291px 0px;}
+#clpO {background-position: -340px 0px;}
+#clpG {background-position: -388px 0px;}
+
+.bordertopall {border-top: 3px solid #E21013;}
+.bordertoppharma {border-top: 3px solid #F99C10;}
+.bordertopclinical {border-top: 3px solid #00508A;}
+.bordertopfood {border-top: 3px solid #35A63E;}
+.bordertopwater {border-top: 3px solid #00B6F0;}
+.bordertopcontract {border-top: 3px solid #E21013;}
+.borderbottomcerts {border-bottom: 3px solid #E21013;}
+.borderbottomqcerts {border-bottom: 3px solid #E21013;}
+.bordertophd {border-top: 3px solid #E21013;}
+.bordertopqcatalogue {border-top: 3px solid #E21013;}
+.bordertopqsection {border-top: 3px solid #E21013;}
+.bordertopqproduct {border-top: 3px solid #E21013;}
+
+.borderbottomall {border-bottom: 3px solid #E21013;}
+.borderbottompharma {border-bottom: 3px solid #F99C10;}
+.borderbottomclinical {border-bottom: 3px solid #00508A;}
+.borderbottomfood {border-bottom: 3px solid #35A63E;}
+.borderbottomwater {border-bottom: 3px solid #00B6F0;}
+.borderbottomcontract {border-bottom: 3px solid #E21013;}
+.borderbottomcerts {border-bottom: 3px solid #E21013;}
+.borderbottomqcerts {border-bottom: 3px solid #E21013;}
+.borderbottomhd {border-bottom: 3px solid #E21013;}
+.borderbottomcatalogue {border-bottom: 3px solid #E21013;}
+.borderbottomsection {border-bottom: 3px solid #E21013;}
+.borderbottomproduct {border-bottom: 3px solid #E21013;}
+
+.button_small,
+.button,
+.button_large,
+.button_red,
+.button_red_small,
+.button_red_large,
+.button_submit,
+.button_listing,
+.edit_button 
+{
+color: #ffffff !important;
+background-color: #EB5930;
+text-decoration: none !important;
+text-align: center;
+white-space: nowrap;
+display: inline-block;
+border: 2px solid #EB5930;
+border-radius: 500px;
+cursor: pointer;
+text-transform: uppercase;
+}
+
+.button_small:hover, 
+.button:hover, 
+.button_large:hover, 
+.button_red:hover, 
+.button_red_small:hover,
+.button_red_large:hover,
+.button_submit:hover,
+.button_listing:hover,
+.edit_button:hover 
+{
+color: #ffffff !important;
+background-color: #E21013;
+border: 2px solid #E21013;
+text-decoration: none;
+}
+
+.button_small {font-size: 0.9em; padding: 3px 9px; }
+.button {font-size: 1.05em; padding: 7px 15px; }
+.button_large {font-size: 1.5em; padding: 10px 20px; }
+.button_submit {font-size: 1.75em; padding: 12px 24px; }
+.button_listing {font-size: 1.3em; padding: 10px 15px; }
+
+.button_red_small {font-size: 0.9em; padding: 3px 9px; border: 2px solid #E21013; background: #E21013; }
+.button_red {font-size: 1em; padding: 7px 15px; border: 2px solid #E21013; background: #E21013; }
+.button_red_large {font-size: 1.3em; padding: 10px 20px; border: 2px solid #E21013; background: #E21013; }
+.button_red:hover, .button_red_small:hover, .button_red_large:hover { border: 2px solid #EB5930; background: #EB5930; }
+
+.pointer-up { padding-right: 30px; background-image: url('https://www.tcsbiosciences.co.uk/images/pointer-up.png'); background-position: right 5px; background-repeat: no-repeat; }
+.pointer-right { padding-right: 30px; background-image: url('https://www.tcsbiosciences.co.uk/images/pointer-right.png'); background-position: right 5px; background-repeat: no-repeat; }
+.pointer-down { padding-right: 30px; background-image: url('https://www.tcsbiosciences.co.uk/images/pointer-down.png'); background-position: right 5px; background-repeat: no-repeat; }
+.pointer-left { padding-left: 30px; background-image: url('https://www.tcsbiosciences.co.uk/images/pointer-left.png'); background-position: left 5px; background-repeat: no-repeat; }
+
+.edit_button {font-size: 0.9em; margin: 2px; padding: 3px; border-radius: 2px;}
+
+a.button_small:link, a.button:link, a.button_large:link, a.button_red:link, a.button_home_slider:link, a.button_submit:link, a.button_listing:link, a.edit_button:link {color: #ffffff; text-decoration: none;}
+a.button_small:visited, a.button:visited, a.button_large:visited, a.button_red:visited, a.button_home_slider:visited, a.button_submit:visited, a.button_listing:visited, a.edit_button:visited {color: #ffffff; text-decoration: none;}
+a.button_small:hover, a.button:hover, a.button_large:hover, a.button_red:hover, a.button_home_slider:hover, a.button_submit:hover, a.button_listing:visited, a.edit_button:hover {color: #ffffff; text-decoration: none;}
+a.button_small:active, a.button:active, a.button_large:active, a.button_red:active, a.button_home_slider:active, a.button_submit:active, a.button_listing:visited, a.edit_button:active {color: #ffffff; text-decoration: none;}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="tel"], input[type="password"] {font-size: 1.2em; padding: 6px 3px; border: 1px solid #a5a5a5; border-radius: 3px; width: 98%;}
+input[type="checkbox"] {width: 26px; height: 26px; padding: 6px 3px; border: 1px solid #a5a5a5; border-radius: 6px; vertical-align: middle;}
+textarea {font-size: 1.2em; padding: 3px 0; border: 1px solid #a5a5a5; border-radius: 3px; width: 98%;}
+select {font-size: 1.2em; margin: 2px 0; padding: 6px 3px; border: 1px solid #a5a5a5; border-radius: 3px; max-width: 98%;}
+
+.dateinput { width: 75% !important; }
+
+.plaintextbox { background: transparent; border: 0 none !important; color: #808080; font-size: 1em; }
+.smalltextbox { max-width: 140px !important; }
+
+.button_house_small {font-size: 0.9em; margin: 0 2px; padding: 5px 10px; border: 0 none; color: #ffffff; text-decoration: none; background: #E31110; cursor: pointer; whitespace: nowrap; border-radius: 500px; }
+.button_house_small:hover {background-color: #EB5930;}
+
+.button_house {font-size: 1.0em; margin: 0; padding: 10px 15px; border: 0 none; color: #ffffff; text-decoration: none; background: #E31110; cursor: pointer; display: inline-block;}
+.button_house:hover {background-color: #EB5930;}
+
+.button_house_large {font-size: 1.2em; margin: 0; padding: 12px 18px; border: 0 none; color: #ffffff; text-decoration: none; background: #E31110; cursor: pointer;}
+.button_house_large:hover {background-color: #EB5930;}
+
+.button-learn-more {font-size: 1.0em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; color: #ffffff; text-decoration: none; background: #E31110 url('https://www.tcsbiosciences.co.uk/images/info.png') 5px center no-repeat; cursor: pointer;}
+.button-learn-more:hover {background-color: #EB5930;}
+
+.button-buy-online {font-size: 1.0em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; color: #ffffff; text-decoration: none; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/cart.png') 5px center no-repeat; cursor: pointer;}
+.button-buy-online:hover {background-color: #E31110;}
+
+.button_basket {font-size: 0.9em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/cart.png') 5px center no-repeat; cursor: pointer;}
+.button_basket:hover {background-color: #E31110;}
+
+.button_basket_disabled {font-size: 0.9em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; text-decoration: none !important; background: #808080 url('https://www.tcsbiosciences.co.uk/images/cart.png') 5px center no-repeat; cursor: pointer;}
+
+.button_display {font-size: 0.9em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: #E31110 url('https://www.tcsbiosciences.co.uk/images/details.png') 5px center no-repeat; cursor: pointer;}
+.button_display:hover {background-color: #EB5930;}
+
+.button_print {font-size: 0.9em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/button-print.png') 5px center no-repeat; cursor: pointer; border-radius: 3px;}
+.button_print:hover {background-color: #E31110;}
+
+.button_search {font-size: 0.9em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/button-search.png') 5px center no-repeat; cursor: pointer; border-radius: 3px;}
+.button_search:hover {background-color: #E31110;}
+
+.button_back {font-size: 0.9em; margin: 0; padding: 10px 10px 10px 40px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/pointer-left.png') 5px center no-repeat; cursor: pointer; border-radius: 3px;}
+.button_back:hover {background-color: #E31110;}
+
+.noscreen {display: none;}
+
+.white {color: #ffffff;}
+.black {color: #000000;}
+.grey {color: #999999;}
+
+.housebg {background: #E21013;}
+.whitebg {background: #ffffff;}
+.blackbg {background: #000000;}
+.greybg {background: #cfcfcf;}
+
+.house {color: #E21013;}
+.all {color: #E21013;}
+
+.pharma {color: #F99C10;}
+.clinical {color: #00508A;}
+.food {color: #35A63E;}
+.water {color: #00B6F0;}
+.contract {color: #E21013;}
+
+.pharmabg {color: #ffffff; background: rgba(249,156,16,1);}
+.clinicalbg {color: #ffffff; background: rgba(0,80,138,1);}
+.foodbg {color: #ffffff; background: rgba(53,166,62,1);}
+.waterbg {color: #ffffff; background: rgba(0,182,240,1);}
+.contractbg {color: #ffffff; background: rgba(226,16,9,1);}
+
+.paneltext { margin: 0; padding: 12px; border-radius: 4px; white-space: normal; cursor: default; text-transform: none; }
+
+.header_bd { background: #3232cb !important;}
+
+.logoimage_bd {margin: 5px;}
+
+.contenttoplinks {width: 100%; font-size: 0.85em; margin: 0; padding: 0; color: #ffffff; background: #323232;}
+.crumbtrail {float: left; font-weight: 200; margin: 0; padding: 21px 6px 18px 6px;}
+.crumbtrail a {color: #ffffff; font-weight: 200; text-decoration: none;}
+.crumbtrail a:hover {color: #E21013; text-decoration: underline;}
+.scertslink {float: right; margin: 0; padding: 21px 6px 18px 45px; background: transparent url('https://www.tcsbiosciences.co.uk/images/tcs_device_32.png') center left no-repeat;}
+.scertslink a {color: #E21013; text-decoration: none;}
+.scertslink a:hover {color: #ffffff; text-decoration: underline;}
+
+.qcertbutton {margin: 0;}
+.networking {margin: 0;}
+.viewbasket {float: right; text-align: right; margin: 0 0 0 10px;}
+.calltoaction {text-align: center;}
+.eurodisplay {color: #E21013;}
+.cartshade {margin: 5px; padding: 5px; background: #ECEFF6; border: 0 none;}
+.cartright {text-align: right; margin-right: 20px;}
+.catbrowse {font-size: 1.1em; }
+.removex {vertical-align: middle; background: transparent url('https://www.tcsbiosciences.co.uk/images/cross_16.png') center top no-repeat; vertical-align: middle;}
+.removex:hover {background-position: center -16px;}
+
+.number {font-weight: bold; margin: 5px 0 0 0;}
+.counter {width: 50px; float: left; text-align: right; font-weight: bold;}
+.prodlist {width: 650px; float: right; text-align: left;}
+.prodcode {}
+.prodsummary {margin: 5px 5px 5px 50px;}
+
+.floatcheck {width: 33%; float: left;}
+
+.checkoutlabel {display: inline; float: left; width: 140px;}
+
+.paymentlogos { text-align: center; padding: 15px 0; color: #000000; }
+.paymentlogos img { margin: 3px; }
+
+.termsbody {}
+.indented1 {margin-left: 30px; text-indent: -30px;}
+.indented2 {margin-left: 75px; text-indent: -50px;}
+.indented2a {margin-left: 50px; text-indent: -20px;}
+
+.supplierscroller {background-color: #E21013; margin: 0 0 6px 0; padding: 3px; text-align: left; width: 150px; height: 160px; float: right; overflow: auto;}
+
+.mainbody { width: 100%; background: transparent; padding: 0; margin: 0; }
+
+.maincontainer { clear: both; position: relative; width: 100%; background: #ffffff; padding: 0; margin: 0; display: block; }
+
+.maincontent { clear: both; max-width: 1200px; margin: 0 auto; padding: 10px 0 15px 0; display: block; }
+
+.fullwidth { clear: both; max-width: 1200px; margin: 0 auto; padding: 0 0.5%; display: block; }
+    
+.footer { width: 100%; color: #000000; text-align: left; padding: 0; margin: 0; }
+
+.footertext {font-size: 0.7em; margin: 5px;}
+.footeraddress {font-size: 0.7em; margin: 5px;}
+
+.copyrightpanel {width: 100%; margin: 0; padding: 0; color: #ffffff; background: #131313;}
+.webmastercontainer {width: 100%; max-width: 1200px; font-size: 0.8em; text-align: right; padding: 5px 0; margin: 0 auto;}
+
+.webmaster {float: left; margin: 5px; color: #ffffff;}
+.copyright {float: right; margin: 5px; color: #ffffff;}
+
+img {border: 0 none;}
+
+ul.bullets-red li { list-style-image: url('https://www.tcsbiosciences.co.uk/images/bullet-red.png'); padding: 5px 0; }
+
+.clear {clear: both;}
+.clearright {clear: right;}
+
+.separator {clear: both; height: 0; font-size: 0; margin: 0; padding: 0; background: transparent;}
+
+.thinspacer {clear: both; height: 5px; font-size: 0.1em; margin: 0; padding: 0; background: transparent;}
+
+.spacer {clear: both; height: 10px; font-size: 0.1em; margin: 0; padding: 0; background: transparent;}
+
+.bigspacer {clear: both; height: 25px; font-size: 0.1em; margin: 0; padding: 0; background: transparent;}
+
+.floatedboxes {float: left; margin: 0 0 0 0;}
+
+.tight {margin: 0; padding: 0;}
+
+.righttext {text-align: right;}
+
+.righttextsmall {font-size: 0.85em; text-align: right; margin: 0 5px;}
+
+.smaller {
+font-size: 0.9em;
+}
+
+.larger {
+font-size: 1.2em;
+}
+
+.caption {
+font-size: 0.8em;
+}
+
+.plaintext {border: 0 none !important; background: transparent;}
+.plaintexteuro {border: 0 none; color: #E21013;}
+
+.indented {margin-left: 15px;}
+
+.righttextsmall {text-align: right; margin: 0; padding: 0;}
+
+.warningtext {color: #E21013; font-size: 0.6em; text-align: center;}
+
+.button {cursor: pointer;}
+
+.smallbutton {font-size: 0.9em; cursor: pointer;}
+
+.submit {font-weight: bold; cursor: pointer;}
+
+.nav_button {font-size: 0.9em; cursor: pointer; width: 150px; margin: 2px 0px 3px 0px;}
+
+.boldbutton {font-weight: bold; margin: 5px; cursor: pointer;}
+
+.highlighted {font-weight: 600; color: #E21013;}
+
+.subtitle {font-size: 1.2em; color:#cc0000;}
+
+.pricestyle {font-size: 1.2em;}
+
+.fullcol {width: 925px; margin: 0 0 25px 35px;}
+
+.shippingtablecontainer {margin: 0 15px 0 0;}
+
+.leftcolcart {width: 70%; float: left;}
+.leftcolcart p {text-indent: -25px; margin-left: 25px;}
+.rightcolcart {width: 150px; float: right;}
+
+form {margin: 0; padding: 0;}
+
+.formfield {clear: both; margin: 5px 0;}
+.formlabel {width: 30%; float: left; margin: 0 10px 0 0; font-weight: bold;}
+.formlabel30 {width: 30%; float: left; margin: 0 10px 0 0;}
+.formlabel50 {width: 50%; float: left; margin: 0 10px 0 0;}
+
+hr { clear: both; height: 35px; background: transparent url('https://www.tcsbiosciences.co.uk/images/hr.png') center center no-repeat; margin: 36px 0 12px 0; padding: 0; display: block; border: 0 none; }
+
+hr.dashed { clear: both; height: 16px; background: transparent url('https://www.tcsbiosciences.co.uk/images/mainheadbg.png') top center repeat-x; margin: 10px 0; padding: 0; display: block; border: 0 none; }
+
+.underlined {text-decoration: underline;}
+
+a{color: #E21013; text-decoration: underline;}
+a:visited{text-decoration: underline;}
+a:hover{text-decoration: none;}
+a:active{text-decoration: underline;}
+
+a.antilink{color: #E21013; text-decoration: none;} 
+a.antilink:visited{color: #000000; text-decoration: none;} 
+a.antilink:hover{color: #000000; text-decoration: underline;}
+a.antilink:active{color: #000000; text-decoration: none;}
+
+a.whitelink{color: #ffffff; text-decoration: none;} 
+a.whitelink:visited{text-decoration: none;} 
+a.whitelink:hover{text-decoration: underline;}
+a.whitelink:active{text-decoration: none;}
+
+a.webmasterlink{color: #ffffff; text-decoration: none; font-style: italic;} 
+a.webmasterlink:visited{text-decoration: none;} 
+a.webmasterlink:hover{text-decoration: underline;}
+a.webmasterlink:active{text-decoration: none;}
+
+a.footerlink{color: #000000; text-decoration: none;} 
+a.footerlink:visited{color: #000000; text-decoration: none;} 
+a.footerlink:hover{color: #E21013; text-decoration: underline;}
+a.footerlink:active{color: #000000; text-decoration: none;}
+
+a.blacklink{color: #000000; text-decoration: none;} 
+a.blacklink:visited{color: #000000; text-decoration: none;} 
+a.blacklink:hover{color: #000000; text-decoration: underline;}
+a.blacklink:active{color: #000000; text-decoration: none;}
+
+a.greylink{color: #656565; text-decoration: none;} 
+a.greylink:visited{color: #656565; text-decoration: none;} 
+a.greylink:hover{color: #E21013; text-decoration: underline;}
+a.greylink:active{color: #656565; text-decoration: none;}
+
+a.plainlink{text-decoration: none;} 
+a.plainlink:visited{text-decoration: none;} 
+a.plainlink:hover{text-decoration: none;}
+a.plainlink:active{text-decoration: none;}
+
+h1 {
+font-size: 2.0em;
+color: #333333;
+}
+
+h2 {
+font-size: 1.8em;
+font-weight: 200 !important;
+color: #333333;
+text-transform: uppercase;
+padding-top: 0.9em !important;
+padding-bottom: 0.3em !important;
+margin: 0;
+}
+
+h3 {
+font-size: 1.6em;
+font-weight: bold;
+color: #333333;
+display: inline-block;
+padding: 0.9em 0 0.3em 0;
+margin: 0;
+}
+
+#newslist h3 { margin-top: 0; display: block; }
+
+h4 {
+font-size: 1.4em;
+font-weight: bold;
+color: #333333;
+padding: 0.5em 0;
+margin: 0;
+}
+
+h5 {
+font-size: 1.2em;
+color: #E21013;
+padding: 0.5em 0;
+margin: 0;
+}
+
+h6 {
+font-size: 1.1em;
+color: #333333;
+font-style: italic;
+padding: 0.5em 0;
+margin: 0;
+}
+
+h2.house, h3.house {
+	color: #333333 !important;
+}
+h2.all, h3.all {
+	color: #333333 !important;
+}
+h2.pharma, h3.pharma {
+	color: #333333 !important;
+}
+h2.clinical, h3.clinical {
+	color: #333333 !important;
+}
+h2.food, h3.food {
+	color: #333333 !important;
+}
+h2.water, h3.water {
+	color: #333333 !important;
+}
+h2.contract, h3.contract {
+	color: #333333 !important;
+}
+
+.maincontent li {list-style-position: outside;}
+
+.tall { line-height: 1.5em; }
+
+ul.feature {color: #E21013; margin-left: 0; padding-left: 15px;}
+li.feature {color: #E21013; margin-left: 0; padding: 0 0 3px 3px;}
+
+.nobull { list-style-type: none; padding: 0; }
+
+li.pdf {list-style-type: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/pdf_38.png') left top no-repeat; height: 38px; padding: 6px 0 0 43px;}
+li.ppt {list-style-type: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/ppt_38.png') left top no-repeat; height: 38px; padding: 6px 0 0 43px; }
+li.xls {list-style-type: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/xls_38.png') left top no-repeat; height: 38px; padding: 6px 0 0 43px; }
+li.doc {list-style-type: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/doc_38.png') left top no-repeat; height: 38px; padding: 6px 0 0 43px; }
+li.web {list-style-type: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/web_38.png') left top no-repeat; height: 38px; padding: 6px 0 0 43px; }
+li.tick {list-style-type: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/tick_red.gif') left top no-repeat; margin: 3px 0; padding: 6px 0 0 30px; }
+
+.menuheading {padding: 0 0 5px 0; border-bottom: solid 1px #E21013; color: #E21013; font-weight: bold;}
+
+a{color: #E21013; text-decoration: underline;}
+
+a.boxlink{color: #E21013; text-decoration: none; font-weight: bold; font-size: 1.4em; text-transform: capitalize;}
+a.boxlink:visited{text-decoration: none;}
+a.boxlink:hover{text-decoration: underline;}
+a.boxlink:active{text-decoration: none;}
+
+a.smallboxlink{color: #E21013; text-decoration: none; font-weight: bold; font-size: 1.1em; text-transform: capitalize;}
+a.smallboxlink:visited{text-decoration: none;}
+a.smallboxlink:hover{text-decoration: underline;}
+a.smallboxlink:active{text-decoration: none;}
+
+.tbl { display: table; width: 100%; box-sizing: border-box; }
+.tr { display: table-row; width: 100%; }
+.tableheader { display: table-row; }
+.th { display: table-cell; font-weight: bold; }
+.td { display: table-cell; }
+.thr { display: block; width: 100%; font-weight: bold; }
+.tdr { display: block; width: 100%; }
+
+.tabledesc { border-radius: 5px 5px 0 0; text-align: center; font-weight: bold; }
+.tabledesc a { display: block; padding: 5px; text-decoration: none; }
+.tablecode { min-width: 130px; padding: 6px 0; text-align: center; }
+.tableform { min-width: 75px; padding: 6px 0; text-align: center; }
+.tablepack { min-width: 75px; padding: 6px 0; text-align: center; }
+.tableprice { min-width: 150px; padding: 6px 0; text-align: center; }
+.tablebuttons {}
+.row-spacer { display: block; width: 100%; height: 12px; background: #ffffff; }
+
+.productstable, .certificatestable { border: 1px solid #ffffff; border-color: #ffffff; }
+.productstable .thr, .certificatestable .thr, .productstable .tdr, .certificatestable .tdr { border: 1px solid #ffffff; }
+.certificatestable .td { padding: 6px 4px; }
+.productstable .thr, .certificatestable .thr  { padding: 6px 4px; text-align: left; color: #666666; background: #dcddde; }
+.productstable .tr:hover .tdr, .certificatestable .tr:hover .tdr { background: #e5e5e5; }
+
+.certheading {max-width: 800px; font-size: 1.4em; font-style: italic; font-weight: bold; text-align: center; margin: 12px auto;}
+#certificatecontainer { max-width: 800px; margin: 0 auto; }
+.certlabel {width: 25%; font-weight: bold; text-align: left;}
+.certdata {width: 75%; font-weight: normal; text-align: left;}
+.certstable {border: 1px solid #ffffff; border-color: #ffffff; border-collapse: collapse;}
+.certstable th, .certstable td {border: 1px solid #ffffff;}
+.certstable th {padding: 6px 2px; text-align: left; color: #666666; background: #dcddde;}
+.certstable tr:hover td {background: #e5e5e5;}
+
+.printfooter { display: none; }
+
+.newsdark {padding: 5px; margin: 5px 0; border: 1px solid #ECEFF6; background: #fefefe url('https://www.tcsbiosciences.co.uk/images/lightbg.gif') bottom left repeat-x;}
+.newslight {padding: 5px; margin: 5px 0; background: #ffffff;}
+
+/* 2013 Styles:  */
+
+a:active, a:focus {outline: none;}
+
+.catmap {margin: 0px; padding: 0;}
+.catmapgroupdiv {float: left; margin: 0 5px 5px 0; color: #818181; width: 220px; height: 250px; overflow: visible;}
+.catmapgroupheading {position: relative; height: 55px;}
+.catmapgroupheading h3 {position: absolute; left: 0; bottom: 0; font-size: 1.3em; margin: 0; font-weight: 100;}
+.catmapgroupimage {width: 214px; height: 100px; margin: 0 0 5px 0;}
+.catmapgroupimage img {margin: 5px 0 0 0;}
+.catmapgroupimage img:hover {opacity:0.75; -moz-opacity:0.75; -khtml-opacity: 0.75; filter:alpha(opacity=75); border-right: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-radius: 5px;}
+.catmapgroupbody {width: 220px; height: 120px; overflow: auto;}
+.catmapsubtext {margin: 0 0 0 20px; text-indent: -10px; padding: 0; color: #666667;}
+.catmapsubsubtext {margin: 0 0 0 30px; text-indent: -10px; padding: 0; color: #666667;}
+.catmapsubul {margin: 0; padding: 0 0 0 12px;}
+.catmapsubli {color: #666667;}
+
+a.catmaplink {color: #E21013;}
+a.catmaplink {color: #E21013; text-decoration: none;}
+a.catmaplink:visited {color: #E21013; text-decoration: none;}
+a.catmaplink:hover {color: #E21013; text-decoration: none;}
+a.catmaplink:active {color: #E21013; text-decoration: none;}
+
+a.catmapsublink {color: #666667;}
+a.catmapsublink:link {text-decoration: none; color: #666667;}
+a.catmapsublink:visited {text-decoration: none; color: #666667;}
+a.catmapsublink:hover {text-decoration: underline; color: #E21013;}
+a.catmapsublink:active {text-decoration: none; color: #666667;}
+
+.subnavtext {margin: 0 0 0 20px; text-indent: -10px; color: #E21013;}
+.subsubnavtext {margin: 0 0 0 20px; text-indent: -10px; color: #E21013;}
+
+.quicklinkspanel { width: 100%; margin: 0; padding: 20px 0; background: #2C2C2C; }
+.quicklinks { max-width: 1200px; margin: 0 auto; }
+.quicklinksdark { color: #1f1f1f; }
+
+.quicklinks h5 { color: #ECA07E; font-size: 1.4em; font-weight: bold; padding: 0; margin: 0 0 15px 0; }
+.quicklinks p { color: #8f8f8f; font-size: 0.9em; padding: 0; margin: 3px 0 20px 0; }
+.quicklinks ul { margin: 6px 0; padding: 0; list-style-type: none; }
+.quicklinks li { color: #8f8f8f; font-size: 0.9em; margin: 9px 0; padding: 0; list-style-type: none; }
+
+a.quicklink:link {color: #8f8f8f; text-decoration:none;} 
+a.quicklink:visited {color: #8f8f8f; text-decoration:none;} 
+a.quicklink:hover {color: #E21013; text-decoration:underline;}
+a.quicklink:active {color: #8f8f8f; text-decoration:none;}
+
+a.quickheadinglink:link {color: #ECA07E; text-decoration:none;} 
+a.quickheadinglink:visited {color: #ECA07E; text-decoration:none;} 
+a.quickheadinglink:hover {color: #E21013; text-decoration:none;}
+a.quickheadinglink:active {color: #ECA07E; text-decoration:none;}
+
+#quicklinkshome { width: 40%; float: left; }
+#quicklinkscategories { width: 60%; float: left; }
+#quicklinkscontact { width: 60%; float: left; }
+#quicklinksaccreditations { width: 40%; float: left; }
+
+.footer-smm li { float: left; display: inline-block; }
+.footer-smm-img { margin: 0 9px 9px 0; border-radius: 50%; }
+.footer-smm img:hover { box-shadow: 1px 1px 3px 1px rgba(192,0,0,0.75); }
+
+table.printedcat { border-bottom: 1px solid #bbbbbb; margin-bottom: 15px; page-break-after: always; }
+th { text-align: left; }
+
+.di_panel { float: left; margin: 0 15px 10px 0; padding: 0; width: 45%; }
+.di_logo { float: right; margin: 10px; }
+.nowrap { white-space: nowrap; }
+
+.homecontainer { background: #ffffff !important; }
+.newscontainer { background: #ECEFF6 !important; }
+
+.twtr-hd { display: none; }
+.twtr-tweet-text { color: #818181; font-family: arial,verdana,tahoma,helvetica,sans-serif; font-size: 1.1em; }
+
+#sthoverbuttons { margin-top: 15%; }
+
+.ordertable { font-size: 1em; }
+.orderpop { position: absolute; bottom: 5px; left: 70px; z-index: 10; width: 500px; background: #f1f1f1; border: 1px dotted #999999; padding: 5px; }
+th { text-align: left; }
+
+/* NEW PRODUCT PAGE LAYOUT */
+
+.product_panel { clear: both; margin: 0; padding: 0; }
+
+.product_navigation { width: 100%; margin: 0; padding: 0; border-bottom: 3px solid #EB5930; }
+
+#productnav { font-size: 0.9em; font-weight: normal; color: #ffffff; }
+#productnav ul { float: left; margin: 0 0 2px 0; padding: 0; list-style: none; }
+#productnav li { float: left; margin: 0 1px 0 0; padding: 9px 6px; background: #999999; }
+#productnav li:hover { background: #E21013; }
+#productnav .tabon, #productnav .tabon:hover { background: #EB5930; } 
+
+.product_image_panel { }
+.product_image { max-width: 95%; padding: 0; border: 4px solid #E2E5EC; border-radius: 4px; background: #ffffff; }
+
+.product_content_panel { float: left; min-height: 400px; margin: 0; padding: 0; }
+.product_content_panel li { list-style-position: inside; }
+.product_content_container {}
+.product_content_container h3 { font-size: 1.4em; }
+.product_content_container p {}
+.product_content_container ul {}
+.product_content_container li {}
+.product_content_container .qtybox { border: 2px solid #EB5930; margin: 0 3px 0 0; border-radius: 0; box-sizing: border-box; }
+.product_content_logo { position: absolute; top: 15px; right: 108px; z-index: 15; }
+
+.proddetailson { display: block; }
+.proddetailsoff { display: none; }
+
+#clearcontent { }
+#descriptioncontent { }
+#specificationcontent { }
+#clpcontent { }
+#reviewscontent { }
+#financecontent { }
+#imagescontent { }
+#moviecontent { }
+
+#descriptiontab {cursor: pointer;}
+#specificationtab {cursor: pointer;}
+#clptab {cursor: pointer;}
+#reviewstab {cursor: pointer;}
+#imagestab {cursor: pointer;}
+#financetab {cursor: pointer;}
+#movietab {cursor: pointer;}
+
+#descriptionpane { padding: 9px 0; }
+#pricepane { padding: 9px 0; }
+#specificationpane { padding: 9px 0; }
+#clppane { padding: 9px 0; }
+#reviewsspane { padding: 9px 0; }
+#financespane { padding: 9px 0; }
+#imagesspane { padding: 9px 0; }
+#moviepane { padding: 9px 0; }
+
+.relateddescription { min-height: 70px; font-weight: bold; }
+
+.minigallery {width: 300px; height: 185px; padding: 0; margin: 75px 0 25px 0; border: 0 none;}
+.minigalleryimage {border-radius: 5px;}
+
+.slide2container {width: 300px; height: 185px; text-align: center; margin: 0; border: 0 none; display: block; overflow: hidden;}
+.slide2image {width: 300px; height: 170px; margin: 0; text-align: center; margin: 0; overflow: hidden;}
+.slide2image img {margin: 0; cursor: pointer;}
+
+.minigallerynote {position: absolute; z-index: 5; width: 300px; text-align: center; bottom: 100px; left: 0;}
+
+#gallery_images img {border-radius: 5px;}
+
+.documenticon {margin: 0 5px 0 0; vertical-align: middle;}
+
+/* END OF NEW PRODUCT PAGE LAYOUT */
+
+/* 2014 FACELIFT STYLES: */
+
+.labelstable {width: 100%; background: #ffffff; font-size: 0.8em; margin: 0;}
+
+.catmapbuttons {margin-right: 3px;}
+
+.catnav {}
+
+.catnav ul {display: block; list-style-type: none; margin: 0; padding: 0;}
+.catnav ul li {width: 100%; min-height: 45px;}
+
+.catnav ul li ul {display: none; border-left: 2px solid #E21013;}
+.catnav ul li:hover .catsubmenu {display: block;}
+
+.catnav ul li ul li ul {display: none; border-left: 1px solid #E21013;}
+.catnav ul li ul li:hover .catsubsubmenu {display: block;}
+
+li.catsubli {position: relative; float: left; min-height: 36px; margin: 0; padding: 0; text-align: left; color: #666667; border-bottom: 1px solid #cccccc;}
+li.catsubli:hover {color: #E21013; border-bottom: 1px solid #E21013;}
+
+li.catsubli a {padding: 10px 2px 6px 2px;}
+li.catsubli a:link {text-decoration: none; color: #666667;}
+li.catsubli a:visited {text-decoration: none; color: #666667;}
+li.catsubli a:hover {text-decoration: none; color: #E21013;}
+li.catsubli a:active {text-decoration: none; color: #666667;}
+
+li.catsubli ul {position: absolute; top: 80%; left: 0; white-space: nowrap; min-width: 80%; z-index: 90; text-align: left; list-style-type: none; margin: 0; padding: 0; background: #dfdfdf;}
+
+li.catsubli ul li {position: relative; width: auto; min-height: 25px; margin: 0; padding: 4px 2px 0 2px; color: #666667; border-bottom: 1px solid #cccccc;}
+li.catsubli ul li:hover {color: #E21013; border-bottom: 1px solid #E21013;}
+li.catsubli ul li a {}
+li.catsubli ul li a:link {text-decoration: none; color: #666667;}
+li.catsubli ul li a:visited {text-decoration: none; color: #666667;}
+li.catsubli ul li a:hover {text-decoration: none; color: #E21013;}
+li.catsubli ul li a:active {text-decoration: none; color: #666667;}
+
+li.catsubli ul li ul {position: absolute; top: 80%; left: 20%; white-space: nowrap; min-width: 80%; z-index: 95; text-align: left; list-style-type: none; margin: 0; padding: 0; background: #d3d3d3;}
+
+li.catsubli ul li ul li {width: auto; min-height: 25px; margin: 0; padding: 4px 2px 0 2px; color: #666667; border-bottom: 1px solid #cccccc;}
+li.catsubli ul li ul li:hover {color: #E21013; border-bottom: 1px solid #E21013;}
+li.catsubli ul li ul li a:link {text-decoration: none; color: #666667;}
+li.catsubli ul li ul li a:visited {text-decoration: none; color: #666667;}
+li.catsubli ul li ul li a:hover {text-decoration: none; color: #E21013;}
+li.catsubli ul li ul li a:active {text-decoration: none; color: #666667;}
+
+/* member menu styling */
+
+#memmenu {clear: both; background: rgba(227,5,27,0.85); color: #ffffff; font-size: 0.9em; box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);}
+
+#memmenu ul {margin: 5px; padding: 0; list-style: none;}
+#memmenu li {float: left; margin: 0; padding: 0; border-right: 1px solid #ffffff;}
+
+#memmenu li span {padding: 2px;}
+
+#memmenu a {color: #ffffff; text-decoration: none; padding: 2px 5px; display: block;}
+#memmenu a:hover {background: #02356A;}
+
+.fullwidth #memmenu, #memberhome #memmenu {clear: both; background: transparent; color: #555555; font-size: 1em; box-shadow: none;}
+
+.fullwidth #memmenu ul, #memberhome #memmenu ul {margin: 5px; padding: 0; list-style: none;}
+#memberhome #memmenu ul {columns: 2;}
+.fullwidth #memmenu li, #memberhome #memmenu li {float: none; margin: 5px; padding: 0; border-right: 0 none;}
+.fullwidth #memmenu li {float: left;}
+.fullwidth>#memmenu li:first-child {display: none;}
+
+.fullwidth #memmenu li, #memberhome #memmenu li span {padding: 2px;}
+
+.fullwidth #memmenu a, #memberhome #memmenu a {color: #ffffff !important; background-color: #EB5930; text-decoration: none !important; text-align: center; white-space: nowrap; display: inline-block; border: 2px solid #EB5930; border-radius: 3px; cursor: pointer; }
+.fullwidth #memmenu a:hover, #memberhome #memmenu a:hover {color: #ffffff !important; background-color: #E21013; border: 2px solid #E21013; text-decoration: none; }
+
+/* end member menu styling */
+
+/* begin distributor styling */
+
+.distadminlist {list-style-type: none; margin: 0; padding: 0;}
+.distadminlist li {padding: 5px; margin: 5px 0; border: 1px solid #E2DEDE; background: #EAE6E6;}
+.distadminlist li:nth-child(even) {background: #F3F1F1;}
+.distadminlist img {padding: 5px; background: #ffffff; border: 1px solid #cccccc; border-radius: 7px;}
+
+#distributorinfo {}
+#distributorinfo img {padding: 5px; background: #ffffff; border: 1px solid #cccccc; border-radius: 7px;}
+
+#distmenu { clear: both; background: rgba(227,5,27,0.85); color: #ffffff; font-size: 0.9em; box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);}
+
+#distmenu ul {margin: 5px; padding: 0; list-style: none;}
+#distmenu li {float: left; margin: 0; padding: 0; border-right: 1px solid #ffffff;}
+
+#distmenu ul li ul {float: none; display: block;}
+#distmenu ul li:hover ul {display: block;}
+
+#distmenu li span {padding: 2px;}
+
+#distmenu a {color: #ffffff; text-decoration: none; padding: 2px 5px; display: block;}
+#distmenu a:hover {background: #02356A;}
+
+.distpanelon {display: block;}
+.distpaneloff {display: none;}
+
+/* end distributor styling */
+
+/* begin distributor map styling */
+
+#distributorsmapcontainer { background: #efefef; color: #333333; }
+#distributorsmap { position: relative; } /* NOT for modal distributors map (use tinybox .tcontent for modal distributors map) and edit this css accordingly */
+.distlocationselect { position: absolute; top: 5px; left: 5px; background: #ffffff; border-radius: 6px; z-index: 5; padding: 5px; font-size: 1.15em; }
+.distributorsmapworldwide { width: 100%; max-width: 900px; height: 460px; margin: 0 auto; padding: 0; background-image: url('https://www.tcsbiosciences.co.uk/images/worlwide_map_900_460.png'); background-color: #efefef; background-position: 0px top; background-repeat: no-repeat; text-align: left; }
+.distributorsmapeuropean { width: 100%; max-width: 900px; height: 460px; margin: 0 auto; padding: 0; background-image: url('https://www.tcsbiosciences.co.uk/images/europe_map_500_500.png'); background-color: #efefef; background-position: 175px -40px; background-repeat: no-repeat; text-align: left; }
+.thislocimage { z-index: 20; position: absolute; width: 21px; height: 30px; background: transparent url('https://www.tcsbiosciences.co.uk/images/red-marker.png') center center no-repeat; }
+.locimage { z-index: 10; position: absolute; width: 21px; height: 30px; background: transparent url('https://www.tcsbiosciences.co.uk/images/grey-marker.png') center center no-repeat; cursor:pointer; }
+.thislocimage:hover, .locimage:hover {background: transparent url('https://www.tcsbiosciences.co.uk/images/orange-marker.png') center center no-repeat; }
+.maptitle { z-index: 5; position: absolute; bottom: 0; left: 0; height: 80px; padding: 10px 0 0 80px; font-size: 1.3em; font-weight: bold; background: transparent url('https://www.tcsbiosciences.co.uk/images/map-marker-large.png') left top no-repeat; }
+.europeandistributorslink { z-index: 5; position: absolute; top: 65px; left: 390px; width: 110px; height: 120px; background: rgba(0,0,0,0.15); border-radius: 3px; }
+.europeandistributorslink:hover { background: rgba(238,48,32,0.25); cursor: pointer; }
+.mapcta { z-index: 5; position: absolute; bottom: 15px; right: 5px; }
+
+.territoryselect {}
+
+#mapviewbutton { display: none; }
+
+.distributorlist { clear: both; }
+.distributorlist h3 { margin: 6px 0; }
+.distributorlistlogo { background: #ffffff; padding: 3px; border: 2px solid #dddddd; border-radius: 4px; }
+
+/* end distributor map styling */
+
+/* begin accordion styling */
+
+.expandcollapse { float: right; margin: 9px 6px; }
+.itemcontainer { background: #FEECE6; padding: 9px; margin: 12px 0; border-radius: 9px; }
+.itemheader {font-size: 0.9em; cursor: pointer; }
+.toggleimg {float: right; margin: 6px 0;}
+.openanswer {color: #0076BE;}
+.closedanswer {color: #0076BE;}
+.itemcontent {}
+
+/* end accordion styling */
+
+/* begin doc store styling */
+
+.docbutton {width: 45%; margin: 1%; float: left; font-size: 1.2em;}
+
+.statustext {float: right;}
+
+.catheading h3 {color: #666666;}
+
+.darkbg {background: #D8DFEC;}
+
+.lightbg {background: #ECEFF6;}
+
+/* end doc store styling */
+
+/* begin modal styles */
+
+.modal-tiny-iframe-wrapper {
+	position: relative;
+	padding-top: 0;
+	padding-bottom: 75%;
+	width: 750px;
+	height: 100%;
+}
+
+.modal-tiny-iframe-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* end modal styles */
+
+/* 2016 styles */
+
+#site-map .infolinks { font-size: 0.9em; }
+
+#content { position: relative; }
+
+#message-box { position: relative; display: none; }
+#message-box-close { position: absolute; top: 0; right: 0; z-index: 300; cursor: pointer; width: 50px; height: 60px; background: transparent url('https://www.tcsbiosciences.co.uk/images/message-box-hide.png') right top no-repeat; }
+#message-box-close:hover { background-position: right -60px; }
+#message-box-open { position: absolute; display: none; top: 0; right: 0; z-index: 300; cursor: pointer; width: 50px; height: 60px; background: transparent url('https://www.tcsbiosciences.co.uk/images/message-box-show.png') right -60px no-repeat; }
+#message-box-open:hover { background-position: right top; }
+
+#message-header { position: relative; display: none; }
+#message-header-close { position: absolute; top: 0; right: 0; z-index: 300; font-size: 1.3em; padding: 10px; cursor: pointer; color: #ffffff; }
+#message-header-close:hover { color: #ee0000; }
+#message-header-open { position: absolute; top: 0; right: 0; z-index: 300; font-size: 1.3em; padding: 10px; cursor: pointer; color: #ffffff; }
+#message-header-close:hover { color: #ee0000; }
+
+.floatright {float: none;}
+.floatleft {float: none;}
+.floatrightimg {float: right; margin: 3px 0 3px 10px;}
+.floatleftimg {float: left; margin: 3px 10px 10px 0;}
+
+.no-overflow {overflow: hidden;}
+.overflow-none {overflow: none;}
+.alignright {text-align: right;}
+.alignleft {text-align: left;}
+.aligncenter {text-align: center;}
+.centered {text-align: center; margin: 0 auto; }
+img.centered {display: block; margin-left: auto !important; margin-right: auto !important;}
+
+.valignmiddle {}
+
+.valignmiddle:before {    		/* create a full-height inline block pseudo=element */
+    content: '';
+    display: inline-block;
+    vertical-align: middle;  	/* vertical alignment of the inline element */
+    height: 100%;
+    width: 0.1%;
+    overflow: hidden;
+}
+
+.valignmiddle > div:first-of-type {
+	display: inline-block;
+    vertical-align: middle;  	/* vertical alignment of the inline element */
+    width: 90%;
+}
+
+.relative { position: relative; }
+.inline {display: inline;}
+
+img {border: 0 none; }
+image {border: 0 none; }
+
+img.responsive,
+image.responsive
+{
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+.rounded {border-radius: 5px;}
+.bordered {border: 1px solid #cccccc;}
+.padded {padding: 5px;}
+.paddedpanel {padding: 10px;}
+.spaced {margin: 9px;}
+.shaded {background: #FEECE6;}
+.gradientdown { background: #FEECE6; background: linear-gradient(to bottom, #FEECE6 0%, #ffffff 100%); }
+.shadowed {box-shadow: 0px 0px 1px 1px rgba(99,99,99,0.5);}
+.plain {border: 0 none; box-shadow: 0 none; }
+
+.greypanel {background: #F6F6F6;}
+.narrowpanel {width: 80%; margin: 10px auto;}
+.borderedpanel {border: 1px solid #cccccc; border-radius: 7px; padding: 5px;}
+.greybordered {background: #F6F6F6; border: 1px solid #cccccc; border-radius: 7px;}
+
+.adminwelcome  {margin: 5px 0 0 0; padding: 5px; background: #ECEFF6; font-size: 0.8em;}
+
+.shaded-admin {border: 2.5px #db8300 solid; color: #454545; background: #f1e566; background: radial-gradient(ellipse at center, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%); border-radius: 3px;}
+.shaded-admin ul {display: table; width: 100%;}
+.shaded-admin li {display: table-cell; float: left; padding: 5px;}
+
+.loggedin_menus { position: fixed; z-index: 999999; width: 100%; }
+
+#adminmenu { background: rgba(1,125,195,0.85) url('https://www.tcsbiosciences.co.uk/images/annwebcom_device_26.png') 4px 2px no-repeat; color: #ffffff; font-size: 0.9em; 
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);
+	box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);}
+
+#adminmenu ul {margin: 5px; padding: 0; list-style: none;}
+#adminmenuright li {float: right; margin: 0; padding: 0; border-left: 1px solid #ffffff;}
+#adminmenuleft li {float: left; margin: 0; padding: 0; border-right: 1px solid #ffffff;}
+#adminmenuleft li:first-child a:hover {background: transparent;}
+
+#adminmenu li span {padding: 2px 5px; display: block;}
+
+#adminmenu a {color: #ffffff; text-decoration: none; padding: 2px 5px; display: block;}
+#adminmenu a:hover {background: #02356A;}
+
+.underlined {text-decoration: underline;}
+.indented {margin-left: 25px;}
+.warning {color: #FE101C; font-weight: bold;}
+
+.smaller {font-size: 0.9em;}
+.smallest, small {font-size: 0.8em;}
+.large {font-size: 1.1em;}
+.larger {font-size: 1.2em;}
+.largest {font-size: 1.5em;}
+.warning {color: #FE101C; font-weight: bold;}
+.bold {font-weight: bold;}
+
+.table { width: 100%; display: table; }
+.table-cell { display: table-cell; }
+
+.datapresentationtable { background: #efefef; border: 2px solid #dcddde; }
+.datapresentationtable th { border: 2px solid #ffffff; border-collapse: collapse; font-weight: bold; text-align: left; color: #666666; background: #dcddde; }
+.datapresentationtable td { border: 2px solid #ffffff; border-collapse: collapse; }
+
+.nowrap {white-space: nowrap;}
+.underlined {text-decoration: underline;}
+.line-through {text-decoration: line-through; }
+.clickable {cursor: pointer;}
+.uppercase {text-transform: uppercase;}
+.capitalize {text-transform: capitalize;}
+.scroll { overflow-y: scroll !important; }
+
+.tight {margin: 0; padding: 0;}
+
+.toggledown { width: 38px !important; height: 38px !important; margin: 0 !important; padding: 0 !important; border: 0 none !important; color: transparent; text-align: center; text-decoration: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/pointer-down.png') center top no-repeat; cursor: pointer;}
+.toggleup { width: 38px !important; height: 38px !important; margin: 0 !important; padding: 0 !important; border: 0 none !important; color: transparent; text-align: center; text-decoration: none; background: transparent url('https://www.tcsbiosciences.co.uk/images/pointer-up.png') center top no-repeat; cursor: pointer;}
+
+.reveal {display: none;}
+.revealed {display: block;}
+
+.showmore { height: 26px !important; margin: 0 !important; font-size: 0.9em; padding: 8px 0 0 32px; border: 0 none !important; color: transparent; text-align: left; text-decoration: none !important; overflow: hidden; background: transparent url('https://www.tcsbiosciences.co.uk/images/pointer-down-header.png') left top no-repeat; cursor: pointer;}
+.showless { height: 26px !important; margin: 0 !important; font-size: 0.9em; padding: 8px 0 0 32px; border: 0 none !important; color: transparent; text-align: left; text-decoration: none !important; overflow: hidden; background: transparent url('https://www.tcsbiosciences.co.uk/images/pointer-up-header.png') left top no-repeat; cursor: pointer;}
+.showmore:hover, .showless:hover { background-position: left -32px;}
+
+/* Cookies Warning Styles */
+
+#cookiesWarning {
+	z-index: 999999;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #000000;
+	box-shadow: 0px -5px 6px -0 rgba(66,66,66,0.5);
+	font-size: 1em;
+}
+
+#cookiesWarningActive {
+	color: #ffffff;
+	background: transparent;
+	margin: 0 auto;
+	padding: 15px 5px;
+	border: none;
+	max-width: 1250px;
+	font-weight: 200;
+	text-align: left;
+}
+
+#cookiesWarningActiveNotTicked {
+	color: #ffffff;
+	background: #ee0000;
+	margin: 5px 0;
+	padding: 5px;
+	border: none;
+	font-weight: 200;
+	text-align: left;
+}
+
+#readMoreURL {
+	width: 30%;
+	float: right;
+	font-weight: 200;
+	text-align: right;
+}
+
+#cookiesText {
+	width: 65%;
+	float: left;
+	text-align: left;
+}
+
+#cookiesText h5 {
+	color: #ffffff;
+	margin: 0;
+	padding: 3px 0;
+	font-weight: 200;
+	font-size: 1.5em;
+}
+
+
+#acceptWarning {
+}
+
+#cookiesDisabled {
+}
+
+.cookiesAcceptance {
+	padding: 5px;
+}
+
+#cookieForm {
+	clear: both;
+	padding: 5px 0;
+	text-align: right;
+}
+
+#agreed {
+	font-size: 1.6em;
+	padding: 5px;
+}
+
+#cookieForm label {
+	margin: 0 9px;
+}
+ 
+
+/* / Cookies Warning Styles */
+
+
+/* Responsive Web Design Styles */
+
+.flexbox
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+    justify-content: flex-start;
+}
+.flexbox-item-2,
+.flexbox-item-3,
+.flexbox-item-4,
+.flexbox-item-5
+{
+	display: flex;
+	flex: 1 1 98%;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 0 !important;
+	margin: 6px 1%;
+	width: 0;
+	box-sizing: border-box;
+}
+.flexbox-item-5
+{
+	flex: 0 1 48%;
+}
+
+.flexbox-cta
+{
+	margin-top:auto;
+	text-align: center;
+}
+
+/* mobile styles */
+
+.notsmallscreen {display: none;}
+.smallscreen {display: block;}
+.notmediumscreen {display: none;}
+.mediumscreen {display: block;}
+
+.displayinline {display: inline;}
+
+iframe {border: 0 none; margin: 0; padding: 0; overflow: auto;}
+
+.panel-box-rwd  {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0;
+	height: 0;
+}
+
+.rwd-first-div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.contactcontainer { margin: 0; padding: 0; color: #ffffff; background: #ffffff url('https://www.tcsbiosciences.co.uk/images/all_2018.jpg') left center no-repeat; background-size: cover; }
+.contactcontainer a, .contactcontainer a:hover { color: #ffffff; text-decoration: none; }
+.contact-panel h2, .contact-panel h5 { color: #ffffff; }
+
+.contact-pane { width: 100%; padding: 10px 0; text-align: left; }
+
+.contact-single { margin: 0; padding: 12px 0;}
+.contact-double { margin: 0; padding: 3px 0;}
+
+.contact-icon { float: left; width: 50px; height: 50px; margin-right: 12px; text-align: center; }
+.contact-icon a { display: inline-block; width: 80%; height: 80%; margin: 0 5px; padding: 12px 6px; box-sizing: border-box; border-radius: 50%; color: #ffffff; background: #000000; }
+.contact-icon a:hover { color: #000000; background: #F0222F; }
+.smm-pane, .payment-logos-pane { width: 100%; padding: 10px 0; text-align: left; }
+
+#feedback { text-align: center; }
+
+#smmbuttons-wrapper, #payment-logos-wrapper { display: block; clear: both; margin: 0; padding: 0; text-align: center; }
+#smmbuttons-wrapper img { height: 75px; margin: 5px; border-radius: 7%; }
+
+#contactbuttons-wrapper { display: flex; clear: both; margin: 0; padding: 0; text-align: center; border-bottom: 4px solid #E4100D; color: #333333; }
+#contactbuttons { display: inline-block; margin: 0 auto; padding: 0; }
+.contactbutton { border-radius: 50%; color: #ffffff; background: #D8DAE2; padding: 0; margin: 5px 5px 0 0; float: left; cursor: pointer; font-size: 2.5em; width: 75px; height: 75px; }
+.contactbutton:hover { background: #ACAFB8 !important; }
+.contactbutton i { padding: 17px; }
+#buttononline { margin-right: 0; }
+
+#contactcontent { display: block; clear: both; margin: 0; padding: 7px; line-height: 1.3em; height: 2.2em; }
+.contactcontenton { display:  block; }
+.contactcontentoff { display:  none; }
+#contactcontent a { color: #333333; text-decoration: none !important; }
+
+.locationcontainer { background: #ECEFF6; color: #333333; }
+.location-panel-off { width: 100%; background: #E31110; color: #ffffff;}
+.location-panel-on { width: 100%; }
+#genreset { padding: 12px 0; text-align: center; }
+#locationset { padding: 12px 0; text-align: center; }
+#submitlocation { border: 2px solid #ffffff; border-radius: 3px; }
+
+.cataloguecontainer {}
+.catalogue-panel { width: 100%; background: #ECEFF6; }
+
+.twittercontainer { background: #ffffff; }
+.twitter-panel { width: 100%; background: #ffffff; }
+#tcs-twitter-img { position: relative; height: 160px; }
+#tcs-twitter-img img { position: absolute; top: -30px; left: 50%; margin-left: -110px; z-index: 100;  }
+#tcs-twitter { height: 350px; background: #ffffff; overflow: hidden; }
+#tcs-twitter iframe { margin: 0 auto !important; }
+
+.videowrapper {
+	position: relative;
+	padding-bottom: 56.25%; 	/* 16:9 */
+	padding-top: 0;
+	height: 0;
+}
+.modal-tiny-iframe-wrapper {
+	position: relative;
+	padding-bottom: 133%; 		/* 4:3 */
+	padding-top: 0;
+	height: 0;
+}
+.gallerywrapper {
+	position: relative;
+	padding-bottom: 125%; 		/* 4:5 */
+	padding-top: 0;
+	height: 0;
+}
+.square-wrapper-rwd {
+	position: relative;
+	padding-bottom: 100%; 		/* 1:1 */
+	padding-top: 0;
+	height: 0;
+}
+.twothirds-wrapper-rwd, .image-rwd {
+	position: relative;
+	padding-bottom: 66.66%;		/* 3:2 */
+	padding-top: 0;
+	height: 0;
+}
+.half-wrapper-rwd {
+	position: relative;
+	padding-bottom: 50%; 		/* 2:1 */
+	padding-top: 0;
+	height: 0;
+}
+.onethird-wrapper-rwd {
+	position: relative;
+	padding-bottom: 33.33%; 	/* 1:3 */
+	padding-top: 0;
+	height: 0;
+}
+
+.portraitwrapper {
+    position: relative;
+    padding-bottom: 141.4%;
+    padding-top: 0;
+    height: 0;
+    overflow: auto;
+}
+
+.videowrapper iframe,
+.videowrapper>div,
+.portraitwrapper iframe,
+.image-rwd div,
+.gallerywrapper iframe,
+.modal-tiny-iframe-wrapper iframe,
+.productbox > div:first-of-type
+.relatedproductbox > div:first-of-type
+.square-wrapper-rwd iframe,
+.square-wrapper-rwd > div:first-of-type,
+.twothirds-wrapper-rwd > div:first-of-type,
+.twothirds-wrapper-rwd iframe,
+.half-wrapper-rwd > div:first-of-type,
+.onethird-wrapper-rwd > div:first-of-type
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* tinybox modal */
+
+.tcontent { position: relative; background: #ffffff; }  /* modal content wrapper */
+.tbox { position: absolute; display: none; padding: 14px 17px; z-index:900; border-radius: 9px; }
+.tinner { padding: 0; border-radius: 5px; background: rgba(255,255,255,1) url('https://www.tcsbiosciences.co.uk/images/preload.gif') no-repeat 50% 50%; }
+
+.tmask { position: absolute; display: none; top: 0px; left: 0px; height: 100%; width: 100%; background: #000000; z-index:800; }
+
+.tclose { position: absolute; top: 0; left: 0; width: 30px; height: 30px; cursor:pointer; background: url(https://www.tcsbiosciences.co.uk/images/close.png) no-repeat; }
+.tclose:hover { background-position: 0 -30px}
+
+#error { background:#ff6969; color:#fff; text-shadow:1px 1px #cf5454; border-right: 1px solid #000; border-bottom: 1px solid #000; padding:0; }
+#error .tcontent { padding: 10px 14px 11px; border: 1px solid #ffb8b8; border-radius: 5px; }
+#success { background: #2ea125; color: #ffffff; text-shadow: 1px 1px #1b6116; border-right: 1px solid #000; border-bottom: 1px solid #000; padding: 10px; border-radius: 0; }
+#tmask { background: #333333; }
+#frameless { padding: 0; }
+#frameless .tclose { left: 6px; }
+
+/* /tinybox modal */
+
+.image-contain-v img { max-height: 100%; }
+
+.image-contain-h img { max-width: 100%; }
+
+.productbox { position: relative; overflow: hidden; }
+.relatedproductbox { position: relative; margin-bottom: 10%; overflow: hidden; }
+
+.productbox .heading-pane {
+	margin: 0 !important;
+	height: 50px;
+	display: block;
+}
+
+.button-pane { width: 100%; padding: 0; margin: 4px 0; white-space: nowrap; }
+.button-pane a { display: inline-block; }
+
+.productbox .image-contain-h img { border: 2px solid #AAADB4; border-radius: 4px; max-width: 98%; }
+.productbox .image-contain-h img:hover { border-color: #EB5930; }
+
+.productbox ul { position: relative; text-align: left; margin: 0; padding: 0; width: 93%; }
+.productbox ul li { font-weight: 600; margin: 0; padding: 6px 0.75% !important; border-radius: 4px; }
+.productbox ul li:hover { background: #d3d3d3; }
+
+.productbox ul li ul { position: absolute; top: 35px; left: 0; z-index: 25; text-align: left; background: #d3d3d3; margin: 0; padding: 0; border: 0 none; width: 100%; }
+.productbox ul li ul li { font-size: 0.9em; font-weight: 200; background: #ffffff; margin: 1px; padding: 9px 0.75% 9px 5% !important; border-radius: 0 !important;}
+.productbox ul li ul li:hover { background: #d3d3d3; }
+
+.productbox ul a { color: #000000 !important; text-decoration: none; margin-right: 42px; padding: 3px; display: block; }	// margin-right allows for sub-sub-show buttons
+.productbox ul a:hover { text-decoration: none;}
+
+.relatedproductbox .image-contain-h img { border: 2px solid #AAADB4; border-radius: 4px; max-width: 98%; }
+.relatedproductbox .image-contain-h img:hover { border-color: #EB5930; }
+
+.pdf-over { position: absolute; z-index: 10; top: 3px; right: 3px; width: 38px; height: 38px; background: url('https://www.tcsbiosciences.co.uk/images/pdf_38.png') center center no-repeat; }
+
+.side-bar-share { min-height: 36px; display: block; text-align: center; }
+
+.column-content, .column-side-bar { width: 100%; margin: 0; padding: 5px 0; }
+
+.column-20, .column-25, .column-30, .column-33, .column-40, .column-45, .column-50, .column-60, .column-66, .column-70, .column-75, .column-80, .column-checkout, .column-grid { width: 100%; margin: 0; padding: 0; }
+
+.column-checkout { margin-bottom: 5px !important; }
+.column-checkout h2 { margin: 0 !important; padding: 0 !important; }
+.column-checkout input[type="text"], .column-checkout select { width: 96% !important; padding: 5px 1%; font-size: 1.2em; }
+
+.checkout-wide { width: 100%; margin: 0; padding: 0; }
+
+.deliverylocationselect { padding: 5px 1%; font-size: 1.2em; }
+
+.formlabel, 
+.formlabel30, 
+.formlabel50, 
+.formlabel60, 
+.formlabel75, 
+.formlabelwide, 
+.rightformlabel 
+{width: 100%; float: left; margin: 0;}
+
+.formfield { clear: both; margin: 10px 0; }
+
+.verificationcode { max-width: 20%; margin-left: 3px; }
+
+.container { clear: both; width: 100%; }
+
+.issuuembed, #issuuwrapper iframe { margin: 0; padding: 0; background: #DBE5E5; background: url('https://www.tcsbiosciences.co.uk/images/loading.gif') no-repeat center center, linear-gradient(to bottom, #FFF3EF 0%, #FFFFFF 50%, #FFF3EF 100%); box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5); }
+
+.framecontainer { position: relative; clear: both; width: 100%; height: 600px; margin: 0; padding: 0; background: #DBE5E5; background: url('https://www.tcsbiosciences.co.uk/images/loading.gif') no-repeat center center, linear-gradient(to bottom, #FEECE6 0%, #FFF3EF 50%, #FEECE6 100%); box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5); }
+.framecontainer iframe { width: 100%;  height: 100%; }
+
+.mapcontainer { position: relative; clear: both; width: 100%; height: 300px; margin: 0; padding: 0; background: #DBE5E5; background: url('https://www.tcsbiosciences.co.uk/images/loading.gif') no-repeat center center, linear-gradient(to bottom, #FEECE6 0%, #FFF3EF 50%, #FEECE6 100%); box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5); }
+.mapcontainer iframe { width: 100%;  height: 100%; }
+
+.page-scroll-reserve {position: absolute; z-index: 10; top: 15%; right: 1%; height: 55%; width: 7%; background: rgba(0,0,0,0.1); border-radius: 9px;}
+
+.directionscontainer { position: absolute; z-index: 20; bottom: 0; left: 0; width: 80%; margin: 0 10% 50px 10%; padding: 0; text-align: center; }
+.directionspanel { display: inline-block; margin: 0 auto; padding: 9px; background: rgba(255,255,255,0.5); border-radius: 9px; }
+.directionspanel .button { margin-left: 3px; margin-right: 3px; }
+
+.newmapwindow { position: absolute; bottom: 0; left: 0; z-index: 20; 0; width: 80%; margin: 0 10% 5px 10%; padding: 0; text-align: center;}
+
+.ui-resizable-helper { position: absolute; bottom: 0; left: 0; z-index: 20; margin-bottom: -25px; height: 50px; width: 100%; background: url('https://www.tcsbiosciences.co.uk/images/resize-v.png') center center no-repeat; display:none; }
+
+/* product lists, search, product details, basket and checkout */
+
+.button_catalog 
+{
+color: #ffffff !important;
+background: #535353 !important;
+text-decoration: none !important;
+text-align: center;
+border: 0 none;
+cursor: pointer;
+font-size: 0.9em;
+padding: 5px 10px;
+}
+
+.button_catalog:hover 
+{
+color: #ffffff !important;
+background: #686868 !important;
+text-decoration: none !important;
+}
+
+.select_catalog { background: #ededed; font-size: 0.9em; padding: 5px; }
+
+.setparams { margin: 10px 0; padding: 5px; border-top: 0 solid #8A8A8A; }
+
+.prodcount { font-size: 0.9em; padding: 9px 0; }
+
+.sortorderform { text-align: right; margin: 0 0 0 15px; }
+.filtercontrol { display: block; }
+.sortcontrol { display: block; }
+.sortorderselect { margin: 0 3px; background: #dcdcdc; border: 1px solid #808080; font-size: 0.9em; }
+
+.currencyform { text-align: right; margin: 0 15px 0 0; display: block; }
+.currencyselect { margin: 0 3px 4px 3px; background: #dcdcdc; border: 1px solid #808080; font-size: 0.9em; }
+
+.itemsperpage { text-align: right; }
+
+.prevnext { text-align: right; font-size: 0.9em; line-height: 250%; }
+
+.thispage { color: #ffffff; background: #535353; padding: 5px 8px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; font-weight: bold; }
+
+a.pagenumber {padding: 5px 8px; font-weight: normal; white-space: nowrap; border-radius: 2px; font-weight: bold;}
+a.pagenumber:link {color: #000000; background: #bababa; text-decoration:none; font-weight: bold;} 
+a.pagenumber:visited {color: #000000; background: #bababa; text-decoration:none; font-weight: bold;} 
+a.pagenumber:hover {color: #ffffff; background: #535353; text-decoration:none; font-weight: bold;}
+a.pagenumber:active {color: #000000; background: #bababa; text-decoration:none; font-weight: bold;}
+
+a.pagelink {padding: 5px 8px; font-weight: normal; white-space: nowrap; border-radius: 2px; font-weight: bold;}
+a.pagelink:link {color: #000000; background: #bababa; text-decoration:none; font-weight: normal;} 
+a.pagelink:visited {color: #000000; background: #bababa; text-decoration:none; font-weight: normal;} 
+a.pagelink:hover {color: #ffffff; background: #535353; text-decoration:none; font-weight: normal;}
+a.pagelink:active {color: #000000; background: #bababa; text-decoration:none; font-weight: normal;}
+
+.button_grid {width: 25px; height: 25px; margin: -1px 0 1px 0; padding: 0; border: 0 none; color: transparent; font-size: 0.5em; background: transparent url('index4f4a.html') 0 top no-repeat; cursor: pointer; overflow: hidden; text-decoration: none; display: inline; vertical-align: middle;}
+.button_grid:hover {background-position: 0 -25px;}
+
+.button_list {width: 25px; height: 25px; margin: -1px 0 1px 0; padding: 0; border: 0 none; color: transparent; font-size: 0.5em; background: transparent url('index4f4a.html') -25px top no-repeat; cursor: pointer; overflow: hidden; text-decoration: none; display: inline; vertical-align: middle;}
+.button_list:hover {background-position: right -25px;}
+
+th {text-align: left;}
+
+.catalogbox {margin: 10px 0; color: #222222; text-align: left; font-size: 0.9em; border-bottom: 1px solid #999999;}
+.subsectiontitle {font-weight: bold;}
+a.subsectiontitle:link {color: #222222; text-decoration:none; font-weight: bold;} 
+a.subsectiontitle:visited {color: #222222; text-decoration:none; font-weight: bold;} 
+a.subsectiontitle:hover {color: #222222; text-decoration:underline; font-weight: bold;}
+a.subsectiontitle:active {color: #222222; text-decoration:none; font-weight: bold;}
+
+.setcategoryform {margin: 5px 15px 0 10px;}
+.catheading {border-top: 1px solid #007BC6; margin: 5px 15px 0 10px;}
+
+.resultmessage {margin: 0 10px;}
+
+#search-form { margin: 9px auto; }
+
+/* ------------------ */
+
+.vlistelement {}
+
+.vlistelement p { margin: 5px 9px !important; }
+
+.vlistelement .button { width: 80%; margin: 3px auto !important; }
+
+ul.featurelist { margin: 0 !important; padding: 5px !important; list-style-type: none; background: rgba(255,255,255,0.7); border-radius: 4px;}
+
+ul.featurelist li { margin: 0 !important; padding: 3px !important; border-bottom: 1px solid #dddddd; }
+
+.vimage { max-width: 100%; }
+
+.vlabel { display: inline-block; width: 50%; }
+
+.catinfo { padding-bottom: 5px; margin-bottom: 5px; border-bottom: 1px dotted #dddddd; }
+
+.listfulldesc { padding-bottom: 5px; margin-bottom: 5px; } 
+
+.setparams { float: left; }
+
+.paging { float: right; font-size: 0.9em; }
+
+.vehicledetails {padding: 5px;}
+
+.vehicledetails .button { width: 80%; margin: 3px auto !important; }
+
+.speclines { display: table; width: 100%; font-size: 0.9em; border-radius: 4px; background: rgba(222,231,231,0.8); }
+.speclines div.specline { display: table-cell; float: left; width: 98%; padding: 4px 1%;}
+.speclines div.specline:nth-child(odd) { background: rgba(233,241,241,0.8); }
+
+.finance-table { width: 100%; font-size: 0.9em; border-radius: 4px; background: rgba(222,231,231,0.8); }
+.finance-table tr:nth-child(odd) { background: rgba(233,241,241,0.8); }
+
+ul.vehicledetailspanel { margin: 0 5px !important; padding: 5px !important; list-style-type: none; background: rgba(255,255,255,0.7); border-radius: 4px;}
+
+ul.vehicledetailspanel li { margin: 5px !important; padding: 3px !important; border-bottom: 1px solid #dddddd; }
+
+.button-toggle-view-grid
+{ 
+	font-size: 0.9em;
+	padding: 5px 10px;
+	border-radius: 3px;
+	color: transparent !important;
+	background: #173056;
+	background: url('https://www.tcsbiosciences.co.uk/images/view-grid.png') no-repeat center center, linear-gradient(to bottom, #1B72A1 0%, #1B72A1 50%, #173056 100%);
+	text-decoration: none !important;
+	text-align: center;
+	white-space: nowrap;
+	display: inline-block;
+	border: 0 none;
+	box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);
+	margin: 5px 0;
+	cursor: pointer;
+}
+.button-toggle-view-grid:hover
+{
+	color: transparent !important;
+	background: url('https://www.tcsbiosciences.co.uk/images/view-grid.png') no-repeat center center, linear-gradient(to bottom, #173056 0%, #1B72A1 50%, #1B72A1 100%);
+}
+
+.button-toggle-view-list
+{ 
+	font-size: 0.9em;
+	padding: 5px 10px;
+	border-radius: 3px;
+	color: transparent !important;
+	background: #173056;
+	background: url('https://www.tcsbiosciences.co.uk/images/view-list.png') no-repeat center center, linear-gradient(to bottom, #1B72A1 0%, #1B72A1 50%, #173056 100%);
+	text-decoration: none !important;
+	text-align: center;
+	white-space: nowrap;
+	display: inline-block;
+	border: 0 none;
+	box-shadow: 0px 3px 5px 0px rgba(66,66,66,0.5);
+	margin: 5px 0;
+	cursor: pointer;
+}
+.button-toggle-view-list:hover
+{
+	color: transparent !important;
+	background: url('https://www.tcsbiosciences.co.uk/images/view-list.png') no-repeat center center, linear-gradient(to bottom, #173056 0%, #1B72A1 50%, #1B72A1 100%);
+}
+
+.cycle-slideshow img { width: 100%; height: auto; display: block; }
+
+#slideshow-1, #slideshow-2 { max-width: 400px; margin: 9px auto; }
+#slideshow-1 img { border-radius: 3px; }
+
+#cycle-1 div { width: 100%; height: 100%; border-radius: 3px; background-position: center top; background-repeat: no-repeat; background-size: contain; }
+/*	padding-bottom: 100%; insert this above to force square slider */
+
+#cycle-2 .cycle-slide { margin-right: 2px; height: 78px; }
+#cycle-2 .cycle-slide img { height: 74px; border-radius: 3px; }
+#cycle-2 .cycle-slide img:hover { cursor: pointer; }
+#cycle-2 .cycle-slide-active img { border-bottom: 4px solid #0067B4; }
+
+#cartmessage { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; }
+#cartmessagecontents { position: relative; max-width: 1200px; margin: 5px auto 25px auto; padding: 10px; border: 2.5px #db8300 solid; color: #454545; background: #f1e566; background: url('https://www.tcsbiosciences.co.uk/images/basket_bg.png') right center no-repeat, radial-gradient(ellipse at center, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%); cursor: pointer; }
+.cart-button { position: absolute; top: 0; right: 0; z-index: 20; height: 38px; width: 48px; }
+
+.qtybox { text-align: center; max-width: 60px !important; }
+.couponbox { text-align: center; max-width: 180px !important; padding: 3px !important; font-size: 1.15em !important; }
+
+.cartrow { padding: 2px 0.5%; }
+.cartrow:nth-child(odd) { background: #ffffff; }
+
+.leftcolcart {width: 100%; }
+.rightcolcart {width: 100%; }
+
+.basket_delete {float: left; width: 32px; margin: 0 3px 0 0; height: 100%; }
+
+.rightcolcart .qtybox {float: left; }
+
+.add_to_basket { }
+.add_to_basket_plus { width: 30px; height: 25px; display: block; background: transparent url('https://www.tcsbiosciences.co.uk/images/add_item_to_basket.png') center top no-repeat; cursor: pointer; }
+.add_to_basket_text { width: 124px; height: 25px; display: block; background: transparent url('https://www.tcsbiosciences.co.uk/images/add_item_to_basket_text.png') center top no-repeat; cursor: pointer; }
+.add_to_basket_text:hover { background-position: center -25px; }
+
+.shopping_basket {margin: 5px 0; padding: 5px 0 5px 5px; display: block;}
+.delivery_costs {margin: 3px 0; padding: 0; display: block;}
+.promocode {margin: 0 5px; padding: 5px;}
+
+.label40 {width: 40%; float: left; margin: 0 5px 0 0;}  /* this label container is not responsive */
+.label50 {width: 50%; float: left; margin: 0 5px 0 0;}  /* this label container is not responsive */
+.label60 {width: 60%; float: left; margin: 0 5px 0 0;}  /* this label container is not responsive */
+
+/* /product lists, search, product details, basket and checkout */
+
+.site-header {
+    margin-bottom: 0;
+    position: relative;
+	background: transparent;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.site-header-wrap {
+	z-index: 2;
+    padding: 15px 0;
+    background: transparent url('https://www.tcsbiosciences.co.uk/images/swoosh.png') right center no-repeat;
+}
+
+.site-header-wrap.hpl { background: transparent url('https://www.tcsbiosciences.co.uk/images/molecule-outline-red.png') right center no-repeat; }
+
+.overlay { min-height: calc(100vh - 40px) !important; }
+
+.inner-wrap {
+	z-index: 3;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2%;
+}
+
+.site-branding {
+	width: 169px;
+	height: 177px;
+	background: transparent url('https://www.tcsbiosciences.co.uk/images/logo.png') center center no-repeat;
+    margin: 0;
+	float: left;
+}
+
+.site-branding a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none !important;
+}
+
+#top-menu { z-index: 3; }
+
+.header-strap p { text-align: center; font-size: 0.8em; font-family: "roboto-light","Helvetica Neue",Helvetica,Arial,Verdana,Tahoma,sans-serif; font-weight: 300; letter-spacing: 0.1em; vertical-align: middle; padding: 5px; margin: 0; box-sizing: border-box; }
+
+#header-menu { font-size: 0.8em; font-weight: bold; }
+
+#header-menu>ul {
+	display: block; width: 100%; margin: 0; padding: 0; list-style-type: none; color: #ffffff; background: transparent; position: relative;
+}
+#header-menu>ul>li {
+	display: inline; float: left; text-align: center; vertical-align: middle; padding: 9px 16px 9px 5px; color: #ffffff; box-sizing: border-box; 
+}
+
+#header-menu a { color: #ffffff !important; text-decoration: none !important; }
+
+.header-desc-wrap {
+    position:relative;
+    width:95%;
+    max-width:1200px;
+    box-sizing:border-box;
+    margin:0 auto;
+    padding: 15px 0;
+    text-align:center;
+    text-rendering:optimizeLegibility;
+}
+
+.site-title,
+.home-title {
+    font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Tahoma,sans-serif;
+    letter-spacing:4px;
+    font-weight: 200 !important;
+    font-style:normal;
+    color:#ffffff;
+    text-align:center;
+    border: 0 none;
+	margin: 9px auto;
+    display: inline-block;
+}
+
+.site-title h1,
+.home-title h1 {
+	font-size: 16px;
+	font-size: 1.6rem;
+    font-weight: 200 !important;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	display: inline-block;
+	}
+
+.site-description,
+.home-description {
+    color:#ffffff;
+    font-size:11px;
+    font-size:1.1rem;
+    margin: 10px auto;
+	text-align: center;
+}
+
+#parallax-home .site-title h1 { border-bottom: 0 none; }
+#parallax-home .home-title h1 { border-bottom: 0 none; }
+#parallax-home .site-description { border-bottom: 0 none; }
+#parallax-home .home-description { border-bottom: 0 none; }
+
+a.header-link {
+    background: rgba(133,133,133,0.66);
+    border:3px solid #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    color:#ffffff;
+    cursor:pointer;
+    display:inline-block;
+    font-size:16px;
+    font-size:1.2rem;
+    font-weight:400;
+    letter-spacing:1px;
+    line-height:1;
+    padding:16px;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -ms-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out
+}
+
+a.header-link:hover {
+    background: rgba(255,255,255,1);
+    border: 3px solid #EB5930;
+    color:#EB5930;
+}
+
+.header-scroll, .page-scroll	{ margin: 0 auto; text-align: center; height: 45px; width: 45px; background: transparent url('https://www.tcsbiosciences.co.uk/images/down.png') center center no-repeat; }
+.header-scroll { position: absolute; bottom: 0; left: 0; width: 100%; }
+.header-scroll a, .page-scroll a { display: block; width: 100%; height: 100%; text-decoration: none !important; }
+
+.to-top { background: rgba(226,16,19,0.7); border-radius: 10%; }
+.to-top:hover { background: rgba(235,89,48,0.7); }
+
+.tab-pharma { position: absolute; top: 15%; left: 5px; z-index: 10; width: 40px; height: 33px; border-radius: 0 5px 5px 0; background: rgba(0,0,0,0.5) url('https://www.tcsbiosciences.co.uk/images/pharma-25.png') center center no-repeat; }
+.tab-clinical { position: absolute; top: 15%; left: 5px; z-index: 10; width: 40px; height: 33px; border-radius: 0 5px 5px 0; background: rgba(0,0,0,0.5) url('https://www.tcsbiosciences.co.uk/images/clinical-25.png') center center no-repeat; }
+.tab-food { position: absolute; top: 15%; left: 5px; z-index: 10; width: 40px; height: 33px; border-radius: 0 5px 5px 0; background: rgba(0,0,0,0.5) url('https://www.tcsbiosciences.co.uk/images/food-25.png') center center no-repeat; }
+.tab-water { position: absolute; top: 15%; left: 5px; z-index: 10; width: 40px; height: 33px; border-radius: 0 5px 5px 0; background: rgba(0,0,0,0.5) url('https://www.tcsbiosciences.co.uk/images/water-25.png') center center no-repeat; }
+
+.slick-track { margin-bottom: 24px; }
+
+.slick-slide {
+	background: transparent;
+	overflow: hidden;
+	margin: 0 10px;
+}
+
+.slide-title, .slide-body, .slide-button, .slide-datestamp { text-align: center; padding: 9px 3px; box-sizing: border-box; }
+
+/* .slick-nav { position: absolute; top: -60px; right: 2%; z-index: 10; list-style-type: none; height: 34px; overflow: hidden; } */
+.slick-dots { height: 26px; margin-bottom: 60px; overflow: hidden; position: relative; bottom: 0; }
+.slick-dots li { width: 24px; height: 24px; padding: 0 1px; }
+.slick-dots li button { color: transparent; font-size: 9px; margin: 1px; text-decoration: none !important; text-align: center; width: 24px; height: 24px; padding: 2px 12px; background: #C9CDD8; border: 0; outline: none; cursor: pointer; box-sizing: border-box; border-radius: 50%; }
+.slick-dots li button:hover, .slick-dots li.slick-active button { background: #1F232C; }
+.slick-dots li button:before, .slick-dots li.slick-active button:before { color: transparent; }
+
+.slick-prev, .slick-prev:focus { width: 26px; height: 26px; background: #E21013 url('https://www.tcsbiosciences.co.uk/images/pointer-left.png') -3px center no-repeat; border-radius: 50%; z-index: 100; left: 1px; }
+.slick-next, .slick-next:focus { width: 26px; height: 26px; background: #E21013 url('https://www.tcsbiosciences.co.uk/images/pointer-right.png') -2px center no-repeat; border-radius: 50%; z-index: 100; right: 1px; }
+
+.slick-prev:hover { width: 26px; height: 26px; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/pointer-left.png') -4px center no-repeat; border-radius: 50%; }
+.slick-next:hover { width: 26px; height: 26px; background: #EB5930 url('https://www.tcsbiosciences.co.uk/images/pointer-right.png') -1px center no-repeat; border-radius: 50%; }
+
+.slick-prev::before, .slick-next::before { color: transparent; }
+
+/* responsive styles */
+
+/* Breakpoint at 600px */
+/* Inherits mobile styles, these styles are for mid-sized viewports... */
+
+@media all and ( min-width: 360px ){
+
+	.panel-link-image>div { padding: 10% 10% 0 10%; }
+	.panel-link-text { font-size: 1rem; }
+
+}
+
+@media all and ( min-width: 600px ){
+
+	ul.panel-links li { width: 50%; }
+	.panel-link-image>div { padding: 5% 2.5% 0 2.5%; }
+	.panel-link-text { font-size: 1rem; }
+
+	.flexbox-item-2,
+	.flexbox-item-4
+	{
+		flex: 0 1 46%;
+	}
+	.flexbox-item-5
+	{
+		flex: 0 1 32%;
+		margin: 6px 0.5%;
+	}
+
+	#distmenu ul li ul {float: none; display: none;}
+	#distmenu ul li:hover ul {display: block;}
+	#distmenu ul li ul li {float: none; display: block; border-right: 0 none;}
+
+	.smallscreen {display: none;}
+	.notsmallscreen {display: block;}
+
+	.column-20 {width: 50%;}
+	.column-25 {width: 50%;}
+	.column-30 {width: 50%;}
+	.column-33 {width: 50%;}
+	.column-45 {width: 45%;}
+
+	.productstable, .certificatestable { font-size: 0.9em; }
+
+	.column-grid {width: 50%;}
+	.productbox {
+		padding-bottom: 115%;
+		padding-top: 0;
+		height: 0;
+	}
+	.productbox .image-contain-h img { max-width: 90%; }
+
+	.relatedproductbox {
+		padding-bottom: 133%;
+		padding-top: 0;
+		height: 0;
+		margin-bottom: 3%; 
+	}
+	.relatedproductbox .image-contain-h img { max-width: 90%; }
+
+/* .button-pane { position: absolute; bottom: 0; left: 0; } */
+
+	.floatright {float: right;}
+	.floatleft {float: left;}
+
+	h2 { font-size: 2.3em; }
+
+	.slide-title { height: 2.7em; font-size: 1.1em; }
+
+	.itemsperpage { text-align: left; }
+
+	.leftcolcart {width: 66%; float: left;}
+	.rightcolcart {width: 33%; float: right; text-align: left;}
+
+	input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="tel"], input[type="password"], .dateinput { width: auto; max-width: 98%; }
+
+	.formlabel {width: 30%; float: left; margin: 0 10px 0 0;}
+	.formlabel30 {width: 30%; float: left; margin: 0 10px 0 0;}
+	.formlabel50 {width: 50%; float: left; margin: 0 10px 0 0;}
+	.formlabel60 {width: 60%; float: left; margin: 0 10px 0 0;}
+	.formlabel75 {width: 75%; float: left; margin: 0 10px 0 0;}
+	.formlabelwide {width: 90%; float: left; margin: 0 10px 0 0;}
+	.rightformlabel {width: 35%; float: left; font-weight: bold; margin: 0 5px 0 5px; text-align: right;}
+
+	.tcontent { width: auto; height: auto; position: relative; }
+	.tinner { padding: 15px; border-radius: 5px; background: #fff url(https://www.tcsbiosciences.co.uk/images/preload.gif) no-repeat 50% 50%; border-right: 1px solid #333; border-bottom: 1px solid #333; }
+	.tclose { top: 0; right: 0; }
+	.modal-tiny-iframe-wrapper {
+		padding-bottom: 80%;
+		width: 500px;
+		background: #ffffff;
+	}
+
+	#about>ul { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
+
+	#catmap>ul { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
+
+	#site-map>ul { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
+
+	.site-header-wrap { min-height: 350px; }
+
+	.header-strap p { text-align: left; font-size: 1em; }
+
+	.site-title h1,
+	.home-title h1 {
+		font-size: 22px;
+		font-size: 2.2rem;
+	}
+
+	.site-description,
+	.home-description {
+	    font-size:12px;
+	    font-size:1.2rem;
+	}
+
+	.productbox .image-contain-h img { border-width: 3px; }
+	.relatedproductbox .image-contain-h img { border-width: 3px; }
+
+	.header-scroll 	{ height: 50px; }
+
+	#contactbuttons { margin: 0; }
+
+	.button_basket {font-size: 1.0em; padding: 9px 15px 9px 45px; }
+	.button_basket_disabled {font-size: 1.0em; padding: 9px 15px 9px 45px; }
+	.button_display {font-size: 1.0em; padding: 9px 15px 9px 45px; }
+
+	/* add more styles for mid-sized viewports here... */
+}
+
+@media screen and (min-width: 768px) {
+
+	.panel-link-image>div { padding: 10% 10% 0 10%; }
+
+	.flexbox-item-3
+	{
+		flex: 0 1 32%;
+		margin: 6px 0.5%;
+	}
+	.flexbox-item-5
+	{
+		flex: 0 1 24%;
+		margin: 6px 0.5%;
+	}
+
+	.notmediumscreen {display: block;}
+	.mediumscreen {display: none;}
+
+	.homecontainer { padding-bottom: 50px;}
+
+	.slide-title { height: 2.8em; font-size: 1.2em; }
+
+	.contact-pane { padding: 0; }
+
+	.smm-pane { padding: 0; }
+	#smmbuttons-wrapper img { height: 90px; margin: 5px 7px; }
+
+	.contactcontainer { padding: 0; }
+	.contactbutton { font-size: 3.3em; width: 90px; height: 90px; }
+	.contactbutton i { padding: 18px; }
+
+	#feedback { margin-top: 75px; text-align: left; }
+	
+	.slick-slide { opacity: 0.5; transform: scale(0.66); }
+	.slick-center { opacity: 1;	transform: scale(1); }
+
+	.mapcontainer { width: 100%; height: 350px; }
+	.directionscontainer { margin-bottom: 35px; }
+	.newmapwindow { display: none; }
+	.ui-resizable-helper { display: block; }
+
+	.column-20 {width: 20%;}
+	.column-25 {width: 25%;}
+	.column-30 {width: 30%;}
+	.column-33 {width: 33.33%;}
+	.column-40 {width: 40%;}
+	.column-45 {width: 45%;}
+	.column-50 {width: 50%;}
+	.column-60 {width: 60%;}
+	.column-66 {width: 66.66%;}
+	.column-70 {width: 70%;}
+	.column-75 {width: 75%;}
+	.column-80 {width: 80%;}
+
+	.column-grid {width: 33%;}
+
+	.column-checkout { width: 48%; margin-right: 1%; }
+
+	.checkout-wide { width: 99%;  margin-right: 1%; }
+
+	.column-side-bar .column-50 { width: 100%; }
+
+	.modal-tiny-iframe-wrapper { padding-bottom: 70%; width: 700px; }
+
+	.filtercontrol {display: inline;}
+	.sortcontrol {display: inline;}
+
+	.prodcount {float: left;}
+	.prevnext {float: right;}
+
+	.site-header-wrap { height: 100%; }
+
+	#header-menu>ul { float: right; width: auto; }
+
+	#header-menu>ul>li { float: left; padding: 5px; }
+
+	li.header-catalogue { background-position: 9px center; }
+
+	a#viewcatalogue { padding: 14px 12px 14px 42px; font-size: 0.95em; }
+
+	a#buyonline { padding: 14px 14px 14px 0; font-size: 0.95em; }
+
+	.header-desc-wrap { padding-top: 15px; }
+
+	.site-title h1,
+	.button h1 {
+		font-size: 30px;
+		font-size: 3.0rem;
+	}
+
+	.site-description,
+	.home-description {
+	    font-size:14px;
+	    font-size:1.4rem;
+	}
+
+	.productbox .image-contain-h img { border-width: 4px; }
+	.relatedproductbox .image-contain-h img { border-width: 4px; }
+
+	.header-scroll 	{ height: 60px; }
+
+	#quicklinkshome { width: 20%; float: left; }
+	#quicklinkscategories { width: 30%; float: left; }
+	#quicklinkscontact { width: 30%; float: left; }
+	#quicklinksaccreditations { width: 20%; float: left; }
+
+	.tbl { width: 100%; }
+
+	.thr { display: table-cell; width: auto; font-weight: bold; }
+	.tdr { display: table-cell; width: auto; }
+
+	.tableheader { display: table-row; }
+	.tabledesc { background: transparent; border-radius: 0; text-align: left; }
+	.row-spacer { display: none; }
+
+	#genreset { text-align: left; }
+	#locationset { text-align: right; }
+
+/* add more styles for larger viewports here... */
+
+}
+
+@media screen and (min-width: 1000px) {
+
+	.genre-links { position: absolute; bottom: 0; left: 0; }
+	ul.panel-links li { width: 25%; }
+	.panel-link-text { font-size: 0.75rem; }
+	.panel-link-image>div { padding: 5% 5% 0 5%; }
+
+	.flexbox-item-4
+	{
+		flex: 0 1 24%;
+		margin: 6px 0.5%;
+	}
+	.flexbox-item-5
+	{
+		flex: 0 1 19%;
+		margin: 6px 0.5%;
+	}
+
+	.modal-tiny-iframe-wrapper {
+		padding-bottom: 75%;
+		width: 750px;
+	}
+
+	.site-header-wrap { min-height: 650px; }
+
+	.header-desc-wrap {
+	    padding-top: 15px;
+	}
+
+	.site-title h1,
+	.home-title h1 {
+		font-size: 38px;
+		font-size: 3.8rem;
+	}
+
+	.home-description {
+	    font-size:16px;
+	    font-size:1.6rem;
+	}
+
+	.header-scroll { height: 70px; }
+
+	.slider-heading { margin-bottom: 30px; }
+	.slide-pager { position: absolute; top: -70px; }
+
+	.slide-title { height: 2.9em; font-size: 1.3em; }
+	.slide-body { max-height: 90px; }
+
+	.mapcontainer { width: 100%; height: 400px; }
+
+	#mapviewbutton, .europe-map, .worldwide-map { display: block;}
+
+	#tcs-feedback h5 { padding-top: 50px; }
+
+	#tcs-fiftieth h5 { padding-top: 50px; }
+
+	.follow-button { padding: 13px 62px 13px 36px; }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	.panel-link-text { font-size: 0.9rem; }
+	.panel-link-image>div { padding: 10% 7.5% 0 7.5%; }
+
+	.site-header-wrap { height: 100%; }
+
+	.header-scroll	{ height: 80px; }
+
+	.slide-body { max-height: 120px; }
+
+	.column-grid {width: 25%;}
+
+	.slick-prev { left: -5px; }
+	.slick-next { right: -5px; }
+
+}
+
+@media screen and (min-width: 1400px) {
+
+	.panel-link-text { font-size: 1rem; }
+	.panel-link-image>div { padding: 15% 10% 0 10%; }
+
+}
