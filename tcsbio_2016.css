@@ -872,7 +872,7 @@ li.catsubli ul li ul li a:active {text-decoration: none; color: #666667;}
 
 .floatright {float: none;}
 .floatleft {float: none;}
-.floatrightimg {float: right; margin: 3px 0 3px 10px;}
+.floatrightimg {float: center; margin: 3px 0 3px 10px;}
 .floatleftimg {float: left; margin: 3px 10px 10px 0;}
 
 .no-overflow {overflow: hidden;}
