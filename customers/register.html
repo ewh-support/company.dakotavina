@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from www.tcsbiosciences.co.uk/customers/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2020 09:26:53 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>TCS Biosciences - Customer Area - Register</title>
+<!-- The number one European supplier of animal blood, plasma, serum, microbiological diagnostic kits and quality control products -->
+<meta name="description" content="Manufacture and distribution of animal blood products, plasma, serum, microbiological diagnostic kits and quality control products, Buckinghamshire, UK" />
+<meta name="keywords" content="Animal Blood Products,Microbiological Supplies,Malaria Symptoms Diagnosis,Lectins,Animal Serum,Animal Plasma,Bubble Buster,Complement Fixation Antigens and Reagents,Diagnostic Kits,Microbiological Dyes and Stains,Quality Control Products,QC,Histopathology,UK" />
+<meta name="author" content="TCS Biosciences Ltd and Business RemIT Ltd." />
+<meta name="copyright" content="Copyright TCS Biosciences Ltd. and Business RemIT Ltd." />
+<meta name="owner" content="TCS Biosciences Ltd." />
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="30 days" />
+
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+
+<link rel="image_src" href="https://www.tcsbiosciences.co.uk/images/tcsb_logo.png" />
+
+<link rel="stylesheet" href="../tcsbio_2019.css" type="text/css" />
+<link rel="stylesheet" href="../menu_2019.css" type="text/css" />
+<link rel="stylesheet" href="../tcsbio_print.css" type="text/css" media="print" />
+
+<link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.toTop.min.js"></script>
+<script type="text/javascript" src="../js/parallax.iefix.js"></script>
+
+<script type="text/javascript" src="../js/js.js"></script>
+
+
+<!-- include analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20627570-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /include analytics -->
+
+<script type="text/javascript" src="../sagepay/scripts/countrycodes.js"></script>
+
+<script type="text/javascript">
+<!-- //
+
+// Declaring required variables
+var digits = "0123456789";
+// non-digit characters which are allowed in phone numbers
+var phoneNumberDelimiters = "()- ";
+// characters which are allowed in international phone numbers
+// (a leading + is OK)
+var validWorldPhoneChars = phoneNumberDelimiters + "+";
+// Minimum no of digits in an international phone no.
+var minDigitsInIPhoneNumber = 10;
+
+function isInteger(s)
+{   var i;
+    for (i = 0; i < s.length; i++)
+    {   
+        // Check that current character is number.
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+    }
+    // All characters are numbers.
+    return true;
+}
+function trim(s)
+{   var i;
+    var returnString = "";
+    // Search through string's characters one by one.
+    // If character is not a whitespace, append to returnString.
+    for (i = 0; i < s.length; i++)
+    {   
+        // Check that current character isn't whitespace.
+        var c = s.charAt(i);
+        if (c != " ") returnString += c;
+    }
+    return returnString;
+}
+function stripCharsInBag(s, bag)
+{   var i;
+    var returnString = "";
+    // Search through string's characters one by one.
+    // If character is not in bag, append to returnString.
+    for (i = 0; i < s.length; i++)
+    {   
+        // Check that current character isn't whitespace.
+        var c = s.charAt(i);
+        if (bag.indexOf(c) == -1) returnString += c;
+    }
+    return returnString;
+}
+
+function checkInternationalPhone(strPhone){
+var bracket=3
+strPhone=trim(strPhone)
+if(strPhone.indexOf("+")>1) return false
+if(strPhone.indexOf("-")!=-1)bracket=bracket+1
+if(strPhone.indexOf("(")!=-1 && strPhone.indexOf("(")>bracket)return false
+var brchr=strPhone.indexOf("(")
+if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
+if(strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1)return false
+s=stripCharsInBag(strPhone,validWorldPhoneChars);
+return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
+}
+
+function validate()
+{
+ if (document.getElementById('ME_Email').value.length == 0){
+            alert("Please enter your Email Address");
+            document.getElementById('ME_Email').focus();
+            return false;
+        }
+        else
+        {
+ 		var emailaddress = document.getElementById('ME_Email').value;
+        var emailreg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if(emailreg.test(emailaddress) == false)
+        	{
+			alert("Invalid Email Address");
+            document.getElementById('ME_Email').focus();
+			return false;
+			}
+        }
+ if (document.getElementById('ME_Password').value.length < 8){
+            alert("Please enter a Password");
+            document.getElementById('ME_Password').focus();
+            return false;
+        }
+        else
+        {
+ 		if (document.getElementById('ME_Password').value != document.getElementById('ME_Password_Check').value)
+ 			{
+            alert("Passwords don't match");
+            document.getElementById('ME_Password').focus();
+            return false;
+        	}
+        }
+ if (document.getElementById('ME_Reminder_Question').value.length == 0){
+            alert("Please enter your Reminder Question");
+            document.getElementById('ME_Reminder_Question').focus();
+            return false;
+        }
+ if (document.getElementById('ME_Reminder_Answer').value.length == 0){
+            alert("Please enter your Reminder Answer");
+            document.getElementById('ME_Reminder_Answer').focus();
+            return false;
+        }
+ if (document.getElementById('ME_Company').value.length == 0){
+            alert("Please enter your Company");
+            document.getElementById('ME_Company').focus();
+            return false;
+        }
+ if (document.getElementById('ME_Firstnames').value.length == 0){
+            alert("Please enter your First Names");
+            document.getElementById('ME_Firstnames').focus();
+            return false;
+        }
+ if (document.getElementById('ME_Surname').value.length == 0){
+            alert("Please enter your Surname");
+            document.getElementById('ME_Surname').focus();
+            return false;
+        }
+ if (document.getElementById('ME_Phone').value.length == 0){
+            alert("Please enter your Telephone Number");
+            document.getElementById('ME_Phone').focus();
+            return false;
+        }
+        else
+        {
+        if (checkInternationalPhone(document.getElementById('ME_Phone').value)==false){
+				alert("Please Enter a Valid Phone Number")
+            	document.getElementById('ME_Phone').focus();
+				return false;
+			}
+		}
+ if (document.getElementById('ME_Country').value.length == 0){
+            alert("Please select your Country");
+            document.getElementById('ME_Country').focus();
+            return false;
+        }
+}
+function enableSubmit(){
+	document.getElementById("submit").disabled = false;
+}
+// -->
+</script>
+<script src='../../www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+
+<div class="loggedin_menus noprint">
+</div>
+<!-- <div class="centered housebg larger padded noprint" style="background: #FFFF40;" id="message-header"><div id="message-header-close"><i class="far fa-times-circle black"></i></div><div class="padded"><i class="fas fa-exclamation-circle"></i> TELEPHONE OUTAGE - if unable to get through, please email us: <a href="mailto:sales@tcsgroup.co.uk" class="blacklink">sales@tcsgroup.co.uk</a></div></div> -->
+<!-- <div class="centered housebg white larger padded noprint" style="background: #E21013;" id="message-header"><div id="message-header-close"><i class="far fa-times-circle"></i></div>NEW - Human Platelet Lysate (HPL) Products &nbsp; <a class="button_small" href="/catalog/index.php?CG_ID=45">More details...</a></div> -->
+<!-- <div class="centered housebg white larger padded noprint" style="background: #E21013;" id="message-header"><div id="message-header-close"><i class="far fa-times-circle"></i></div>No orders will be despatched the week of 25th November 2019 for non-blood products. &nbsp; <a class="button_small" href="/article.php?id=166">More details...</a></div> -->
+<!-- <div class="centered housebg white larger padded noprint" style="background: #E21013;" id="message-header"><div id="message-header-close"><i class="far fa-times-circle"></i></div>Christmas Deliveries and Opening Hours... &nbsp; <a class="button_small" href="/article.php?id=167">More details...</a></div> -->
+<div class="centered housebg white larger padded noprint" style="background: #E21013;" id="message-header"><div id="message-header-close"><i class="far fa-times-circle"></i></div>COVID 19 - WE ARE OPEN FOR BUSINESS &nbsp; <a class="button_small" href="../articlef546.html?id=174">More details...</a></div>
+<div style="height: 0px;"></div>
+
+<div class="mainbody" id="mainbody">
+
+<div class="parallax-window site-header" data-parallax="scroll" data-speed="0.4" data-image-src="https://www.tcsbiosciences.co.uk/images/all.jpg">
+		<div class="inner-wrap">
+<!-- inc header top -->
+
+	<div class="site-branding" title="TCS Biosciences"><a href="../index.html"><img class="noscreen" src="https://www.tcsbiosciences.co.uk/images/logo_print.png" width="90" height="90" alt="TCS Biosciences" /></a></div>
+
+	<div class="floatright alignright">
+		<a class="noprint" id="menushow" href="#panelhome">&#9776; show menu</a>
+		<a class="noprint" id="menuhide" href="#mainbody">&#9776; hide menu</a>
+	</div>
+
+<!-- /inc header top -->
+<!-- inc header menu -->
+
+			<div id="mainmenu">
+
+				<ul id="site-menu">
+
+					<li class="drop" id="panelhome"><a class="adrop mouseandtouch" href="../index688c.html?genre=all">Home</a></li>
+
+					<li class="drop" id="panelpharma"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../pharmaceutical.html">Pharmaceutical</a><a class="adrop touchonly" href="#site-menu">Pharmaceutical</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="pharmamenu">
+<!-- include pharma menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../pharmaceutical.html"><strong>Pharmaceutical</strong></a></li>
+	<li class="li-group"><a href="../animal_blood_products2e45.html?genre=pharma">Donor Animal Blood</a></li>
+	<li class="li-group"><a href="../bovine_serum_albumin2e45.html?genre=pharma">Bovine Serum Albumin</a></li>
+	<li class="li-group"><a href="../newborn_calf_serum2e45.html?genre=pharma">Newborn Calf Serum</a></li>
+	<li class="li-group"><a href="../serum_donor2e45.html?genre=pharma">Donor Bovine Serum</a></li>
+	<li class="li-group"><a href="../fetal_bovine_serum2e45.html?genre=pharma">Fetal Bovine Serum</a></li>
+	<li class="li-group"><a href="../fetal_calf_serum2e45.html?genre=pharma">Fetal Calf Serum</a></li>
+	<li class="li-group"><a href="../donor_horse_serum2e45.html?genre=pharma">Donor Horse (Equine) Serum</a></li>
+	<li class="li-group"><a href="../human_serum_and_plasma2e45.html?genre=pharma">Human Serum and Plasma (Normal and disease state)</a></li>
+	<li class="li-group"><a href="../microbiological_qc2e45.html?genre=pharma">Selectrol<sup>&reg;</sup></a></li>
+	<li class="li-group"><a href="../hpl2e45.html?genre=pharma">Human Platelet Lysate (HPL)</a></li>
+	<li class="li-group"><a href="../cardinal2e45.html?genre=pharma"> Cardinal Biologicals Inc.</a></li>
+	<li class="paneltext pharmabg">We carefully select strategic partners from around the globe in order to ensure that we can provide serum products of the highest quality for any application.</li>
+</ul>
+<!-- /include pharma menu  -->
+								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+						</li><!-- /drop -->
+
+					<li class="drop" id="panelclinical"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../clinical.html">Clinical</a><a class="adrop touchonly" href="#site-menu">Clinical</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="clinicalmenu">
+<!-- include clinical menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../clinical.html"><strong>Clinical</strong></a></li>
+	<li class="li-group contractbg"><a href="../sepsis250a.html?genre=clinical">PliNOSa<sup>&reg;</sup> Assay Kit <br />An innovation for Sepsis Screening</a></li>
+	<li class="li-group"><a href="../affinity_chromatography_products250a.html?genre=clinical">Affinity Chromatography</a></li>
+	<li class="li-group"><a href="../affinity_purified_antibodies_and_conjugates250a.html?genre=clinical">Affinity Purified Antibodies and Conjugates</a></li>
+	<li class="li-group"><a href="../animal_blood_products250a.html?genre=clinical">Donor Animal Blood</a></li>
+	<li class="li-group"><a href="../bovine_serum_albumin250a.html?genre=clinical">Bovine Serum Albumin</a></li>
+	<li class="li-group"><a href="../serum_donor250a.html?genre=clinical">Donor Bovine Serum</a></li>
+	<li class="li-group"><a href="../human_serum_and_plasma250a.html?genre=clinical">Human Serum and Plasma (Normal and disease state)</a></li>
+	<li class="li-group"><a href="../eligene_kits_and_realtime_pcr_instruments250a.html?genre=clinical">EliGene<sup>&reg;</sup> Kits and RealTime PCR Instruments</a></li>
+	<li class="li-group"><a href="../fetal_bovine_serum250a.html?genre=clinical">Fetal Bovine Serum</a></li>
+	<li class="li-group"><a href="../fetal_calf_serum250a.html?genre=clinical">Fetal Calf Serum</a></li>
+	<li class="li-group"><a href="../donor_horse_serum250a.html?genre=clinical">Donor Horse (Equine) Serum</a></li>
+	<li class="li-group"><a href="../cellabs_elisa250a.html?genre=clinical">Direct ELISA Kit for Detection of HRP-2</a></li>
+	<li class="li-group"><a href="../cellabs_elisa_ifa250a.html?genre=clinical">Emerging Tropical Diseases Cellabs ELISA/IFA</a></li>
+	<li class="li-group"><a href="../colloidal_gold250a.html?genre=clinical">Colloidal Gold</a></li>
+	<li class="li-group"><a href="../genmark-dx250a.html?genre=clinical">GenMark DX<sup>&reg;</sup> - ePlex<sup>&reg;</sup> Rapid Pathogen Detection</a></li>
+	<li class="li-group"><a href="../dyes_stains250a.html?genre=clinical">Dyes and Stains</a></li>
+	<li class="li-group"><a href="../gonocheck250a.html?genre=clinical">Gonochek<sup>&reg;</sup></a></li>
+	<li class="li-group"><a href="../histopathology250a.html?genre=clinical">Histopathology</a></li>
+	<li class="li-group"><a href="../lectins_and_diagnostic_kits250a.html?genre=clinical">Lectins and Lectin Conjugates</a></li>
+	<li class="li-group"><a href="../nctc_cultures250a.html?genre=clinical">NCTC<sup>&reg;</sup> Cultures</a></li>
+	<li class="li-group"><a href="../microbiological_qc250a.html?genre=clinical">Selectrol<sup>&reg;</sup></a></li>
+	<li class="li-group"><a href="../serology_reagents250a.html?genre=clinical">Serology Reagents</a></li>
+	<li class="li-group"><a href="../polyclonal_antisera_and_conjugates250a.html?genre=clinical">Polyclonal Antisera and Conjugates</a></li>
+	<li class="li-group"><a href="../crypto-cel250a.html?genre=clinical">Crypto-Cel FITC</a></li>
+	<li class="li-group"><a href="../crypto-giardia-cel250a.html?genre=clinical">Crypto/Giardia-Cel FITC</a></li>
+	<li class="li-group"><a href="../giardia-cel250a.html?genre=clinical">Giardia-Cel FITC</a></li>
+	<li class="li-group"><a href="../hpl250a.html?genre=clinical">Human Platelet Lysate (HPL)</a></li>
+	<li class="li-group"><a href="../cardinal250a.html?genre=clinical"> Cardinal Biologicals Inc.</a></li>
+	<li class="paneltext clinicalbg">We offer a wide range of dyes and stains and reagents for serology, clinical chemistry, haematology and microbiology.</li>
+</ul>
+<!-- /include clinical menu  -->
+								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+					<li class="drop" id="panelfood"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../food.html">Food</a><a class="adrop touchonly" href="#site-menu">Food</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="foodmenu">
+<!-- include food menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../food.html"><strong>Food</strong></a></li>
+	<li class="li-group"><a href="../animal_blood_products86b8.html?genre=food">Donor Animal Blood</a></li>
+	<li class="li-group"><a href="../bacticount86b8.html?genre=food">Bacticount Slides</a></li>
+	<li class="li-group"><a href="../colorseed86b8.html?genre=food">ColorSeed&trade;</a></li>
+	<li class="li-group"><a href="../compactdry86b8.html?genre=food">Compact Dry&trade;</a></li>
+	<li class="li-group"><a href="../crypto-cel86b8.html?genre=food">Crypto-Cel FITC</a></li>
+	<li class="li-group"><a href="../crypto-giardia-cel86b8.html?genre=food">Crypto/Giardia-Cel FITC</a></li>
+	<li class="li-group"><a href="../dyes_stains86b8.html?genre=food">Dyes and Stains</a></li>
+	<li class="li-group"><a href="../easyseed86b8.html?genre=food">EasySeed&trade;</a></li>
+	<li class="li-group"><a href="../easystain86b8.html?genre=food">EasyStain&trade;</a></li>
+	<li class="li-group"><a href="../giardia-cel86b8.html?genre=food">Giardia-Cel IF Test</a></li>
+	<li class="li-group"><a href="../isolate86b8.html?genre=food">Isolate<sup>&reg;</sup> for IMS of Cryptosporidium oocysts</a></li>
+	<li class="li-group"><a href="../oocysts_and_cysts86b8.html?genre=food">Oocysts and Cysts</a></li>
+	<li class="li-group"><a href="../microbiological_qc86b8.html?genre=food">Selectrol<sup>&reg;</sup></a></li>
+	<li class="li-group"><a href="../tecta86b8.html?genre=food">TECTA&trade; - Automated Microbiology Detection System</a></li>
+	<li class="paneltext foodbg">Our Selectrol<sup>&reg;</sup> range comprises first generation standard micro-organisms that are manufactured under licence from the Public Health England Culture Collections.</li>
+</ul>
+<!-- /include food menu  -->								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+					<li class="drop" id="panelwater"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../water.html">Water</a><a class="adrop touchonly" href="#site-menu">Water</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="watermenu">
+<!-- include water menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../water.html"><strong>Water</strong></a></li>
+	<li class="li-group"><a href="../animal_blood_products1eb9.html?genre=water">Donor Animal Blood</a></li>
+	<li class="li-group"><a href="../bacticount1eb9.html?genre=water">Bacticount Slides</a></li>
+	<li class="li-group"><a href="../c4hydro1eb9.html?genre=water">C4Hydro&trade; - Legio EZ-Test&trade; and Legio EZ-Count&trade;</a></li>
+	<li class="li-group"><a href="../colorseed1eb9.html?genre=water">ColorSeed&trade;</a></li>
+	<li class="li-group"><a href="../crypto-cel1eb9.html?genre=water">Crypto-Cel FITC</a></li>
+	<li class="li-group"><a href="../crypto-giardia-cel1eb9.html?genre=water">Crypto/Giardia-Cel FITC</a></li>
+	<li class="li-group"><a href="../dyes_stains1eb9.html?genre=water">Dyes and Stains</a></li>
+	<li class="li-group"><a href="../easyseed1eb9.html?genre=water">EasySeed&trade;</a></li>
+	<li class="li-group"><a href="../easystain1eb9.html?genre=water">EasyStain&trade;</a></li>
+	<li class="li-group"><a href="../giardia-cel1eb9.html?genre=water">Giardia-Cel FITC</a></li>
+	<li class="li-group"><a href="../isolate1eb9.html?genre=water">Isolate<sup>&reg;</sup> for IMS of Cryptosporidium oocysts</a></li>
+	<li class="li-group"><a href="../oocysts_and_cysts1eb9.html?genre=water">Oocysts and Cysts</a></li>
+	<li class="li-group"><a href="../microbiological_qc1eb9.html?genre=water">Selectrol<sup>&reg;</sup></a></li>
+	<li class="li-group"><a href="../tecta1eb9.html?genre=water">TECTA&trade; - Automated Microbiology Detection System</a></li>
+	<li class="paneltext waterbg">We have established ourselves in the water industry as Europe's largest specialist supplier of <em>Cryptosporidium</em> and <em>Giardia</em> positive controls, reagents and equipment.</li>
+</ul>
+<!-- /include water menu  -->								</div><div class="clear"></div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+					<li class="drop" id="panelcontract"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../contract_ivd_manufacture.html">Contract Services</a><a class="adrop touchonly" href="#site-menu">Contract Services</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="contractmenu">
+<!-- include contract menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../contract_ivd_manufacture.html"><strong>Contract IVD Manufacture</strong></a></li>
+	<li class="paneltext contractbg">Your ideal partner for contract In Vitro Diagnostics manufacturing and OEM solutions.</li>
+</ul>
+<!-- /include contract menu  -->
+								</div><div class="clear"></div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+
+					<li class="drop" id="panelresources"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../techinfo.html">Resources</a><a class="adrop touchonly" href="#site-menu">Resources</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="resourcesmenu">
+<!-- include resources menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../techinfo.html">Technical Downloads</a></li>
+	<li class="li-group"><a href="../product_guide.html">Product Guide</a></li>
+	<li class="li-group"><a href="../certification.html">Certification</a></li>
+	<li class="li-group"><a href="../dyesandstains/index.html">Dyes And Stains Certificates Of Analysis</a></li>
+	<li class="li-group"><a href="../qcerts/index.html">Selectrol<sup>&reg;</sup> Certificates of Analysis</a></li>
+	<li class="li-group"><a href="../links.html">Related Web Sites</a></li>
+	<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../news.html">News &amp; Events</a>
+		<ul class="ul-sub-group">
+			<li><a href="../news0a58.html?type=News">News</a></li>
+			<li><a href="../newsb20d.html?type=Events">Events</a></li>
+			<li><a href="../news_archive.html">News Archive</a></li>
+		</ul>
+	</li>
+	<li class="li-group"><a href="../careers.html">Careers</a></li>
+	<li class="li-group"><a href="../charity.html">Charitable Donations</a></li>
+	<li class="li-group"><a href="../terms/index.html">Terms</a></li>
+</ul>
+<!-- /include resources menu  -->
+								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+					<li class="drop" id="panelcatalog"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../catalog/index4fbf.html?reset=reset">Products</a><a class="adrop touchonly" href="#site-menu">Products</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="prodmenu">
+<ul>
+<li class="li-group"><a href="../catalog/index-2.html"><strong>all Products</strong></a></li><li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/index24bf.html?CG_ID=1">Serum and Plasma</a><ul class="ul-sub-group" id="submenu_cg_1_0">
+<li id="navlink_cs_117"><a href="../catalog/index3598.html?CG_ID=1&amp;CS_ID=117">Animal Serum and Plasma</a>
+<ul class="ul-sub-sub-group" id="css1_117">
+<li id="navlink_css_113"><a href="../catalog/indexea1c.html?CG_ID=1&amp;CS_ID=117&amp;CSS_ID=113">Animal Plasma</a></li>
+<li id="navlink_css_114"><a href="../catalog/indexc170.html?CG_ID=1&amp;CS_ID=117&amp;CSS_ID=114">Animal Serum</a></li>
+</ul><!-- end of css1_117 -->
+</li><!-- end of navlink_cs_117 -->
+<li id="navlink_cs_115"><a href="../catalog/indexdae9.html?CG_ID=1&amp;CS_ID=115">Bovine Serum Albumin</a></li>
+<li id="navlink_cs_116"><a href="../catalog/indexd077.html?CG_ID=1&amp;CS_ID=116">Human Serum and Plasma</a>
+<ul class="ul-sub-sub-group" id="css1_116">
+<li id="navlink_css_117"><a href="../catalog/indexbec7.html?CG_ID=1&amp;CS_ID=116&amp;CSS_ID=117">Non-Sterile Serum 'Off the Clot'</a></li>
+<li id="navlink_css_118"><a href="../catalog/index49eb.html?CG_ID=1&amp;CS_ID=116&amp;CSS_ID=118">Non-Sterile Plasma, Citrated</a></li>
+<li id="navlink_css_119"><a href="../catalog/indexd99f.html?CG_ID=1&amp;CS_ID=116&amp;CSS_ID=119">Non-Sterile Serum, Plasma Derived 0.2micron filter</a></li>
+<li id="navlink_css_120"><a href="../catalog/index9595.html?CG_ID=1&amp;CS_ID=116&amp;CSS_ID=120">Sterile Filtered Serum, 'Off The Clot'</a></li>
+<li id="navlink_css_121"><a href="../catalog/index21b8.html?CG_ID=1&amp;CS_ID=116&amp;CSS_ID=121">Sterile Filtered Serum, Citrated</a></li>
+<li id="navlink_css_122"><a href="../catalog/indexc3a8.html?CG_ID=1&amp;CS_ID=116&amp;CSS_ID=122">Sterile Filtered Serum, Plasma Derived</a></li>
+</ul><!-- end of css1_116 -->
+</li><!-- end of navlink_cs_116 -->
+<li id="navlink_cs_102"><a href="../catalog/index5f53.html?CG_ID=1&amp;CS_ID=102">Other Sera</a></li>
+</ul><!-- end of submenu_cg_1_0" -->
+</li><!-- end of cg1 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/index9e4a.html?CG_ID=5">Microbiological Media</a><ul class="ul-sub-group" id="submenu_cg_5_0">
+<li id="navlink_cs_13"><a href="../catalog/indexbedf.html?CG_ID=5&amp;CS_ID=13">Bacticount Dipslides</a></li>
+<li id="navlink_cs_4"><a href="../catalog/index6ea9.html?CG_ID=5&amp;CS_ID=4">Compact Dry&trade; Chromogenic Media Plates</a></li>
+</ul><!-- end of submenu_cg_5_0" -->
+</li><!-- end of cg5 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/indexac06.html?CG_ID=6">Animal Blood Products</a><ul class="ul-sub-group" id="submenu_cg_6_0">
+<li id="navlink_cs_14"><a href="../catalog/index4d10.html?CG_ID=6&amp;CS_ID=14">Adult Chicken Cells</a></li>
+<li id="navlink_cs_15"><a href="../catalog/index4823.html?CG_ID=6&amp;CS_ID=15">Donor Horse</a></li>
+<li id="navlink_cs_16"><a href="../catalog/index1528.html?CG_ID=6&amp;CS_ID=16">Donor Sheep</a></li>
+<li id="navlink_cs_1"><a href="../catalog/index599d.html?CG_ID=6&amp;CS_ID=1">Guinea Pig Blood Cells</a></li>
+<li id="navlink_cs_2"><a href="../catalog/index30c7.html?CG_ID=6&amp;CS_ID=2">Rabbit</a></li>
+</ul><!-- end of submenu_cg_6_0" -->
+</li><!-- end of cg6 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/index432e.html?CG_ID=8">Histology</a><ul class="ul-sub-group" id="submenu_cg_8_0">
+<li id="navlink_cs_111"><a href="../catalog/indexf4ee.html?CG_ID=8&amp;CS_ID=111">Buffers and Solutions</a></li>
+<li id="navlink_cs_112"><a href="../catalog/index3160.html?CG_ID=8&amp;CS_ID=112">Embedding and Mounting Media</a></li>
+</ul><!-- end of submenu_cg_8_0" -->
+</li><!-- end of cg8 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/indexc455.html?CG_ID=10">Diagnostic Kits</a><ul class="ul-sub-group" id="submenu_cg_10_0">
+<li id="navlink_cs_119"><a href="../catalog/indexeb44.html?CG_ID=10&amp;CS_ID=119">Diagnostic Kits</a>
+<ul class="ul-sub-sub-group" id="css10_119">
+<li id="navlink_css_127"><a href="../catalog/indexd795.html?CG_ID=10&amp;CS_ID=119&amp;CSS_ID=127">Malaria Test Kit</a></li>
+<li id="navlink_css_130"><a href="../catalog/index2b42.html?CG_ID=10&amp;CS_ID=119&amp;CSS_ID=130">Cellabs Immunofluorescence Kits</a></li>
+<li id="navlink_css_131"><a href="../catalog/index4147.html?CG_ID=10&amp;CS_ID=119&amp;CSS_ID=131">Cellabs Positive Control Slides</a></li>
+<li id="navlink_css_132"><a href="../catalog/index62f9.html?CG_ID=10&amp;CS_ID=119&amp;CSS_ID=132">Cellabs ELISA Detection Kits</a></li>
+</ul><!-- end of css10_119 -->
+</li><!-- end of navlink_cs_119 -->
+<li id="navlink_cs_19"><a href="../catalog/indexff8c.html?CG_ID=10&amp;CS_ID=19">Gonorrhoea and Streptococcus</a></li>
+<li id="navlink_cs_108"><a href="../catalog/indexb841.html?CG_ID=10&amp;CS_ID=108">Serology and Microbiology</a></li>
+</ul><!-- end of submenu_cg_10_0" -->
+</li><!-- end of cg10 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/index4f5b.html?CG_ID=20">Dyes and Stains</a><ul class="ul-sub-group" id="submenu_cg_20_0">
+<li id="navlink_cs_109"><a href="../catalog/indexa187.html?CG_ID=20&amp;CS_ID=109">Dry Dyes and Stains</a></li>
+<li id="navlink_cs_21"><a href="../catalog/indexeba2.html?CG_ID=20&amp;CS_ID=21">Stain Concentrates</a></li>
+<li id="navlink_cs_22"><a href="../catalog/index45c3.html?CG_ID=20&amp;CS_ID=22">Stain Packs</a></li>
+<li id="navlink_cs_110"><a href="../catalog/indexcc99.html?CG_ID=20&amp;CS_ID=110">Wet Dyes and Stains</a></li>
+</ul><!-- end of submenu_cg_20_0" -->
+</li><!-- end of cg20 -->
+
+<li class="li-group" id="cg17"><a href="../catalog/indexd38f.html?CG_ID=17">Selectrol<sup>&reg;</sup></a></li><!-- end of cg17 -->
+
+<li class="li-group" id="cg39"><a href="../catalog/index4f57.html?CG_ID=39">Lectins</a></li><!-- end of cg39 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/indexdb53.html?CG_ID=36"><em>Cryptosporidium</em> and <em>Giardia</em></a><ul class="ul-sub-group" id="submenu_cg_36_0">
+<li id="navlink_cs_64"><a href="../catalog/index7af5.html?CG_ID=36&amp;CS_ID=64">Enumerated Quality Control Products <em>Cryptosporidium / Giardia</em></a></li>
+<li id="navlink_cs_65"><a href="../catalog/indexf553.html?CG_ID=36&amp;CS_ID=65">FITC Conjugated antibodies <em>Cryptosporidium / Giardia</em></a></li>
+<li id="navlink_cs_67"><a href="../catalog/indexd4b9.html?CG_ID=36&amp;CS_ID=67">Immunomagnetic Separation</a></li>
+<li id="navlink_cs_63"><a href="../catalog/index2d1b.html?CG_ID=36&amp;CS_ID=63">Inactive Bulk <em>Cryptosporidium</em> oocysts and <em>Giardia</em> cysts</a></li>
+</ul><!-- end of submenu_cg_36_0" -->
+</li><!-- end of cg36 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/indexc114.html?CG_ID=41">EliGene&reg; Kits</a><ul class="ul-sub-group" id="submenu_cg_41_0">
+<li id="navlink_cs_145"><a href="../catalog/indexeace.html?CG_ID=41&amp;CS_ID=145">Bacterial Infections</a></li>
+<li id="navlink_cs_147"><a href="../catalog/indexd5c2.html?CG_ID=41&amp;CS_ID=147">DNA/RNA Isolation &amp; Spectral Calibration</a></li>
+<li id="navlink_cs_146"><a href="../catalog/indexbae5.html?CG_ID=41&amp;CS_ID=146">Human Genetics</a></li>
+<li id="navlink_cs_142"><a href="../catalog/indexadad.html?CG_ID=41&amp;CS_ID=142">Respiratory Infections</a></li>
+<li id="navlink_cs_143"><a href="../catalog/index8324.html?CG_ID=41&amp;CS_ID=143">Sexually Transmitted Genitourinary Infections</a></li>
+<li id="navlink_cs_144"><a href="../catalog/indexb3ae.html?CG_ID=41&amp;CS_ID=144">Viral Infections</a></li>
+</ul><!-- end of submenu_cg_41_0" -->
+</li><!-- end of cg41 -->
+
+<li class="li-group" id="cg42"><a href="../catalog/indexe30d.html?CG_ID=42">RealTime PCR Instruments</a></li><!-- end of cg42 -->
+
+<li class="li-group" id="cg43"><a href="../catalog/indexc265.html?CG_ID=43">PliNOSa&reg; K-1600 Assay Kit </a></li><!-- end of cg43 -->
+
+<li class="li-group" id="cg44"><a href="../catalog/index39b8.html?CG_ID=44">TECTA&trade; Microbiology Detection System</a></li><!-- end of cg44 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/index2d23.html?CG_ID=45">Human Platelet Lysate (HPL)</a><ul class="ul-sub-group" id="submenu_cg_45_0">
+<li id="navlink_cs_130"><a href="../catalog/index4d05.html?CG_ID=45&amp;CS_ID=130">Blood-derived Products</a></li>
+<li id="navlink_cs_128"><a href="../catalog/index819d.html?CG_ID=45&amp;CS_ID=128">Fibrinogen-Depleted and Gamma-Irradiated HPL Products</a></li>
+<li id="navlink_cs_126"><a href="../catalog/index4de4.html?CG_ID=45&amp;CS_ID=126">Fibrinogen-Depleted HPL Products</a></li>
+<li id="navlink_cs_129"><a href="../catalog/indexd72b.html?CG_ID=45&amp;CS_ID=129">Heparin Products</a></li>
+<li id="navlink_cs_125"><a href="../catalog/index05f0.html?CG_ID=45&amp;CS_ID=125">Standard HPL Products</a></li>
+<li id="navlink_cs_124"><a href="../catalog/indexc1e3.html?CG_ID=45&amp;CS_ID=124">Xeno-free Cell Culture Supplement Products</a></li>
+</ul><!-- end of submenu_cg_45_0" -->
+</li><!-- end of cg45 -->
+
+<li class="li-group"><div class="sub-sub-show">&nbsp;</div><a href="../catalog/index09bd.html?CG_ID=46">Cardinal Biologicals Inc.</a><ul class="ul-sub-group" id="submenu_cg_46_0">
+<li id="navlink_cs_136"><a href="../catalog/index7f9c.html?CG_ID=46&amp;CS_ID=136">Body Fluids</a></li>
+<li id="navlink_cs_133"><a href="../catalog/index0781.html?CG_ID=46&amp;CS_ID=133">Microscope Slides - Stained</a></li>
+<li id="navlink_cs_132"><a href="../catalog/index85c4.html?CG_ID=46&amp;CS_ID=132">Microscope Slides - Unstained</a></li>
+<li id="navlink_cs_131"><a href="../catalog/indexef23.html?CG_ID=46&amp;CS_ID=131">Placentas</a></li>
+<li id="navlink_cs_135"><a href="../catalog/index32f8.html?CG_ID=46&amp;CS_ID=135">Plasma</a></li>
+<li id="navlink_cs_134"><a href="../catalog/index59bf.html?CG_ID=46&amp;CS_ID=134">Serum</a></li>
+</ul><!-- end of submenu_cg_46_0" -->
+</li><!-- end of cg46 -->
+
+<!-- end of menu list -->
+</ul>
+								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+					<li class="drop" id="panelnews"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../news.html">News</a><a class="adrop touchonly" href="#site-menu">News</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="newsmenu">
+<!-- include news menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../news0a58.html?type=News"><strong>News</strong></a></li>
+	<li class="li-group"><a href="../newsb20d.html?type=Events">Events</a></li>
+	<li class="li-group"><a href="../news_archive.html">News Archive</a></li>
+	<li class="li-group"><a href="../charity.html">Charitable Donations</a></li>
+</ul>
+<!-- /include news menu  -->
+								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+					<li class="drop" id="panelcontact"><div class="sub-show">&nbsp;</div><a class="adrop mouseonly" href="../contact_us.html">Contact</a><a class="adrop touchonly" href="#site-menu">Contact</a>
+						<div class="dropdown-fullwidth">
+							<div class="menu-fullwidth">
+								<div class="fullwidth-padding" id="contactmenu">
+<!-- include contact menu  -->
+<ul class="ul-group">
+	<li class="li-group"><a href="../contact_us.html"><strong>Contact Us</strong></a></li>
+	<li class="li-group"><a href="../our_distributors.html">Our Distributors</a></li>
+	<li class="li-group"><a href="../subscribe.html">Subscribe / Unsubscribe to Email Newsletters</a></li>
+	<li class="li-group"><a href="../survey/index.html">Customer Survey</a></li>
+	<li class="li-group"><a href="../careers.html">Careers</a></li>
+	<li class="li-group"><a href="../find_us.html">Find Us</a></li>
+</ul>
+<!-- /include contact menu  -->
+								<div class="clear"></div>
+								</div>
+							</div>
+						</div><!-- /drop-menu -->
+					</li><!-- /drop -->
+
+				</ul>
+
+			</div><!-- /mainmenu -->
+
+<!-- /inc header menu -->
+			<div class="clear"></div>
+		</div><!-- /inner-wrap -->
+</div><!-- site-header -->
+
+<div id="contop" class="contenttoplinks bordertopall">
+	<div class="inner-wrap">
+		<div class="crumbtrail"><i class="fas fa-link"></i>&nbsp;&nbsp;<a href="../index.html">Home</a> &rsaquo; <a href="index-2.html">Customer Area</a> &rsaquo; Register</div>
+<!-- /inc toplinks -->
+		<div class="scertslink">Certificates of Analysis: <span class="nowrap"><a href="../qcerts/index.html">Selectrol</a> | <a href="../dyesandstains/index.html">Dyes &amp; Stains</a><span></div>
+<!-- /inc toplinks -->
+		<div class="separator"></div>
+	</div>
+</div><!-- /contenttoplinks -->
+
+<div class="maincontainer" id="maincontainer">
+
+<div class="maincontent" id="maincontent">
+
+<div class="separator"></div>
+
+<!-- main content -->
+
+<div class="fullwidth">
+
+
+<!-- page content -->
+
+<h2 class="house capitalize">Register as a Customer</h2>
+
+
+<div class="spacer"></div>
+
+<form enctype="multipart/form-data" action="https://www.tcsbiosciences.co.uk/customers/register.php" method="post" onsubmit="return validate()" id="registerform">
+	<div class="rounded shaded padded">
+
+	<div class="formfield"><div class="formlabel">Email Address</div><input name="ME_Email" type="text" id="ME_Email" size="40" maxlength="50" value="" /></div>
+	<div class="formfield"><div class="formlabel">Password</div><input name="ME_Password" type="password" id="ME_Password" size="20" maxlength="20" value="" /></div>
+	<div class="formfield"><div class="formlabel">Repeat Password</div><input name="ME_Password_Check" type="password" id="ME_Password_Check" size="20" maxlength="20" value="" /></div>
+	<div class="formfield"><div class="formlabel">Reminder Question</div><input name="ME_Reminder_Question" type="text" id="ME_Reminder_Question" size="40" maxlength="50" value="" /><br />(Used to retrieve password)</div>
+	<div class="formfield"><div class="formlabel">Reminder Answer</div><input name="ME_Reminder_Answer" type="text" id="ME_Reminder_Answer" size="40" maxlength="50" value="" /></div>
+	<div class="formfield"><div class="formlabel">Account Number</div><input name="ME_Account_Number" type="text" id="ME_Account_Number" size="20" maxlength="50" value="" /></div>
+	<div class="formfield"><div class="formlabel">Company Name</div><input name="ME_Company" type="text" id="ME_Company" size="20" maxlength="50" value="" /></div>
+	<div class="formfield"><div class="formlabel">Salutation</div><input name="ME_Salutation" type="text" id="ME_Salutation" size="20" maxlength="20" value="" /></div>
+	<div class="formfield"><div class="formlabel">Contact First Names</div><input name="ME_Firstnames" type="text" id="ME_Firstnames" size="20" maxlength="50" value="" /></div>
+	<div class="formfield"><div class="formlabel">Contact Surname</div><input name="ME_Surname" type="text" id="ME_Surname" size="20" maxlength="50" value="" /></div>
+	<div class="formfield"><div class="formlabel">Address Line 1</div><input name="ME_Address1" type="text" id="ME_Address1" size="40" maxlength="100" value="" /></div>
+	<div class="formfield"><div class="formlabel">Address Line 2</div><input name="ME_Address2" type="text" id="ME_Address2" size="40" maxlength="100" value="" /></div>
+	<div class="formfield"><div class="formlabel">Town / City</div><input name="ME_Address3" type="text" id="ME_Address3" size="40" maxlength="100" value="" /></div>
+	<div class="formfield"><div class="formlabel">Postcode</div><input name="ME_Postcode" type="text" id="ME_Postcode" size="10" maxlength="10" value="" /></div>
+	<div class="formfield"><div class="formlabel">Country</div>
+    	<select name="ME_Country" id="ME_Country">
+	 		<script type="text/javascript">
+			document.write( getCountryOptionsListHtml( "" ) );
+			</script>
+		</select> 
+	</div>
+	<div class="formfield"><div class="formlabel">Telephone Number</div><input name="ME_Phone" type="text" id="ME_Phone" size="30" maxlength="20" value="" /></div>
+	<div class="formfield"><div class="formlabel">Mobile</div><input name="ME_Mobile" type="text" id="ME_Mobile" size="30" maxlength="30" value="" /></div>
+
+	<div class="formfield"><div class="formlabel">&nbsp;</div><div class="g-recaptcha inline-block" data-sitekey="6Lc5YAAAAAAAAJQ3zNS5DsDkmk6Q54WlvfyHmy7I" data-callback="enableSubmit"></div></div>
+
+<div class="formfield">
+	<label class="column-33 floatleft" for="verification">Verification code</label>
+	<div class="no-overflow">
+		<iframe src="../verification.html" width="66" height="36" style="overflow: hidden;" scrolling="no"></iframe>
+		<input id="verification" name="verification" type="text" size="10" maxlength="6" value="" />
+		<div class="separator"></div>
+		Please enter the characters shown to verify your submission.
+		<div class="separator"></div>
+	</div>
+</div>
+
+<div class="spacer"></div>
+
+	<div class="formfield"><div class="formlabel"><a class="button_small spaced" href="#privacy" onclick="document.getElementById('privacy').style.display='inline';" onkeypress="document.getElementById('privacy').style.display='inline';">Your privacy</a></div>
+	<input class="button_house_large" type="submit" name="register" id="submit" disabled="disabled" value="Register" /></div>
+
+	<div class="spacer"></div>
+	</form>
+	<script type="text/javascript">grecaptcha.reset();</script>
+
+	<div style="display:none;" id="privacy">
+		<p class="smalltext"><a name="privacylink" title="Click to close our Privacy Statement" href="#submit" onclick="document.getElementById('privacy').style.display='none';" onkeypress="document.getElementById('privacy').style.display='none';"><img width="20" height="20" alt="close privacy statement" src="https://www.tcsbiosciences.co.uk/images/cross.gif" style="float: right;" /></a><strong>Privacy Policy</strong></p>
+		<p class="smaller">TCS Biosciences Ltd are committed to protecting your privacy and we comply with the Data Protection laws applicable to the UK. Your details will not be passed or sold to other companies for marketing or mailing purposes. We do use the information we collect about you to process your requests and to provide you a more personalised internet experience. We monitor web site traffic patterns and usage to help us determine which aspects are of most importance to you and to develop the web site design and its layout. We may also use the information we collect, occasionally, to tell you about our progress and changes to TCS Biosciences Ltd  web sites. If you would rather not receive this information, please indicate your wishes when submitting on-line forms or you may send an e-mail to <a href="mailto:marketing@tcsgroup.co.uk?subject=Please remove me from your mailing list">marketing@tcsgroup.co.uk</a>.</p>
+		<p class="smalltext"><a title="Click to close our Privacy Statement" href="#submit" onclick="document.getElementById('privacy').style.display='none';" onkeypress="document.getElementById('privacy').style.display='none';">Close Privacy Statement</a></p>
+	</div>
+
+	<div class="separator"></div>
+	</div>
+</form>
+<script type="text/javascript">grecaptcha.reset();</script>
+
+
+<!-- /page content -->
+
+<div class="bigspacer"></div>
+
+<!-- end of main -->
+
+</div><!-- /fullwidth -->
+
+<!-- /main content -->
+
+<div class="separator"></div>
+
+</div><!-- /main content -->
+
+</div><!-- /main content container -->
+
+<!-- inc feeback panel (old) -->
+ <!-- inc contact panel -->
+
+<div class="maincontainer contactcontainer">
+
+<div class="contact-panel">
+
+	<div class="fullwidth">
+
+		<div class="column-33 floatleft">
+
+<!-- inc contact pane -->
+
+<div class="contact-pane">
+
+	<h2>Order today</h2>
+
+	<div class="spacer"></div>
+
+	<div class="contact-icon"><a href="tel:+441296714222"><i class="fas fa-phone"></i></a></div>
+	<p class="contact-double"><strong>t</strong>: <a class="blacklink" href="tel:+441296714222">+44 (0)1296 714222</a> <br />
+	<strong>f</strong>: +44 (0)1296 714806</p>
+
+	<div class="separator"></div>
+
+	<div class="contact-icon"><a href="mailto:sales@tcsgroup.co.uk?subject=From%20the%20TCS%20Biosciences%20website"><i class="far fa-envelope"></i></a></div>
+	<p class="contact-single"><a class="blacklink" href="mailto:sales@tcsgroup.co.uk?subject=From%20the%20TCS%20Biosciences%20website">sales@tcsgroup.co.uk</a></p>
+
+	<div class="separator"></div>
+
+	<div class="contact-icon"><a href="../find_us.html"><i class="fas fa-map-marker-alt"></i></a></div>
+	<p class="contact-double">Botolph Claydon, Buckingham, <br /><a class="blacklink" href="../find_us.html">MK18 2LR</a>, United Kingdom</p>
+
+	<div class="separator"></div>
+
+	<div class="contact-icon"><a href="../contact_us.html#contact_form"><i class="fas fa-mouse-pointer"></i></a></div>
+	<p class="contact-single"><a class="blacklink" href="../contact_us.html#contact_form"><strong>Enquire online</strong></a></p>
+
+	<div class="separator"></div>
+
+</div><!-- /.contact-pane -->
+
+<!-- /inc contact pane -->
+
+		</div>
+
+		<div class="column-66 floatleft">
+		
+<!-- inc fiftieth pane 2018 -->
+<div id="feedback">
+	<div class="column-50 floatleft centered">
+		<img src="https://www.tcsbiosciences.co.uk/images/55-years-200.png" alt="55 Years" width="200" height="200" />
+	</div>
+	<div class="column-50 floatleft">
+
+		<div class="padded">
+			<h5 class="black">We would love to hear your feedback...</h5>
+			<a class="button" href="../survey/index.html">Give feedback</a>
+			<div class="clear"></div>			
+		</div>
+
+	</div>
+	<div class="spacer"></div>
+</div>
+<!-- /inc fiftieth pane 2018 -->
+
+		</div>
+
+		<div class="separator"></div>
+
+	</div><!-- /fullwidth -->
+
+</div><!-- /.contact-panel -->
+
+<div class="separator"></div>
+
+</div><!-- /maincontainer .contactcontainer -->
+<!-- /inc contact panel -->
+
+<!-- inc home registered customers can -->
+<div class="maincontainer">
+
+<div class="shaded centered">
+
+	<div class="fullwidth">
+
+		<div class="spacer"></div>
+
+			<h3 class="tight">Registered customers can...</h3>
+	
+			<p>&bull; Easily review previous online orders &bull; Add and manage multiple delivery addresses &bull; Save items in your basket for future purchase</p>
+	
+			<p class="tall"><a href="index.html" class="button_house_small">login here</a> &nbsp; <a href="register.html" class="button_house_small">register here</a></p>
+
+		<div class="spacer"></div>
+
+	</div><!-- /fullwidth -->
+
+</div>
+
+</div><!-- /maincontainer -->
+<!-- /inc home registered customers can -->
+
+<!-- inc accreditation panel -->
+<div class="maincontainer accreditationcontainer">
+
+<div class="accreditation-panel">
+
+	<div class="fullwidth centered">
+
+		<div class="bigspacer"></div>
+
+		<hr />
+
+		<h2 class="centered">Accreditations</h2>
+
+		<div class="spacer"></div>
+
+		<a href="http://www.reachready.co.uk/"><img src="https://www.tcsbiosciences.co.uk/images/reach_ready_2019_125.png" width="100" height="125" alt="REACH Ready" title="REACH Ready" class="spaced padded" /></a>
+
+		<img src="https://www.tcsbiosciences.co.uk/images/bsi-and-ukas_12_2017_160x125.png" width="160" height="125" alt="BSI Registered Firm" title="BSI Registered Firm" class="spaced padded" />
+
+		<a href="http://www.bivda.co.uk/"><img src="https://www.tcsbiosciences.co.uk/images/bivda-125.png" width="125" height="125" alt="British In Vitro Diagnostics Association (BIVDA)" title="British In Vitro Diagnostics Association (BIVDA)" class="spaced padded" /></a>
+
+		<a href="http://www.serumindustry.org/"><img src="https://www.tcsbiosciences.co.uk/images/isia_125.png" width="125" height="125" alt="International Serum Industry Association" title="International Serum Industry Association" class="spaced padded" /></a>
+
+		<div class="bigspacer"></div>
+
+	</div><!-- /fullwidth -->
+
+</div><!-- /.accreditation-panel -->
+
+<div class="separator"></div>
+
+</div><!-- /maincontainer .accreditationcontainer -->
+<!-- /inc accreditation panel -->
+<!-- inc quicklinks -->
+<div class="quicklinkspanel">
+	<div class="quicklinks">
+		<div id="quicklinkshome">
+			<div class="padded">
+				<h5><a class="quickheadinglink" href="../index688c.html?genre=all">Home</a></h5>
+				<ul>
+					<li><a class="quicklink" href="../clinical.html">Clinical</a></li>
+					<li><a class="quicklink" href="../pharmaceutical.html">Pharmaceutical</a></li>
+					<li><a class="quicklink" href="../food.html">Food</a></li>
+					<li><a class="quicklink" href="../water.html">Water</a></li>
+					<li><a class="quicklink" href="../catalog/index4fbf.html?reset=reset">Catalogue</a></li>
+					<li><a class="quicklink" href="../techinfo.html">Resources</a> <br /></li>
+					<li>&nbsp;</li>
+					<li><a class="quicklink" href="../distributors/index.html">Distributor Area</a> <br />&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div id="quicklinkscategories">
+			<div class="padded">
+				<h5><a class="quickheadinglink" href="../catalog/index4fbf.html?reset=reset">Categories</a></h5>
+<ul><li><a class="quicklink" href="../catalog/index24bf.html?CG_ID=1">Serum and Plasma</a></li><li><a class="quicklink" href="../catalog/index9e4a.html?CG_ID=5">Microbiological Media</a></li><li><a class="quicklink" href="../catalog/indexac06.html?CG_ID=6">Animal Blood Products</a></li><li><a class="quicklink" href="../catalog/index432e.html?CG_ID=8">Histology</a></li><li><a class="quicklink" href="../catalog/indexc455.html?CG_ID=10">Diagnostic Kits</a></li><li><a class="quicklink" href="../catalog/index4f5b.html?CG_ID=20">Dyes and Stains</a></li><li><a class="quicklink" href="../catalog/indexd38f.html?CG_ID=17">Selectrol<sup>&reg;</sup></a></li><li><a class="quicklink" href="../catalog/index4f57.html?CG_ID=39">Lectins</a></li><li><a class="quicklink" href="../catalog/indexdb53.html?CG_ID=36"><em>Cryptosporidium</em> and <em>Giardia</em></a></li><li><a class="quicklink" href="../catalog/indexc114.html?CG_ID=41">EliGene&reg; Kits</a></li><li><a class="quicklink" href="../catalog/indexe30d.html?CG_ID=42">RealTime PCR Instruments</a></li><li><a class="quicklink" href="../catalog/indexc265.html?CG_ID=43">PliNOSa&reg; K-1600 Assay Kit </a></li><li><a class="quicklink" href="../catalog/index39b8.html?CG_ID=44">TECTA&trade; Microbiology Detection System</a></li><li><a class="quicklink" href="../catalog/index2d23.html?CG_ID=45">Human Platelet Lysate (HPL)</a></li><li><a class="quicklink" href="../catalog/index09bd.html?CG_ID=46">Cardinal Biologicals Inc.</a></li></ul>			</div>
+		</div>
+		<div id="quicklinkscontact">
+			<div class="padded">
+				<h5>TCS Biosciences Ltd</h5>
+				<p>t: <strong>+44 (0)1296 714222</strong> <br />
+				f: +44 (0)1296 714806 <br />
+				e: <a class="quicklink" href="mailto:sales@tcsgroup.co.uk" title="click to email TCS Group"><strong>sales@tcsgroup.co.uk</strong></a></p>
+				<p>Botolph Claydon, Buckingham <a class="quicklink" href="../find_us.html">MK18 2LR</a> <br />
+				United Kingdom</p>
+				<div class="spacer"></div>
+				<ul>
+					<li><a class="quicklink" href="../downloads/TCS_Biosciences_Ltd_Brexit_Statement34ef.pdf?v=1019" target="_blank">Brexit Statement</a></li>
+					<li><a class="quicklink" href="../terms/index-2.html">Terms, Privacy and Cookies</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="quicklinksaccreditations">
+			<div class="padded">
+				<h5>Stay In Touch</h5>
+				<ul>
+					<li><a class="quicklink" href="../contact_us.html">Contact Us</a></li>
+					<li><a class="quicklink" href="../subscribe.html">Subscribe to our newsletter</a></li>
+				</ul>
+				<div class="spacer"></div>
+				<h5>Follow Us</h5>
+				<ul class="footer-smm">
+					<li><a href="https://twitter.com/TCSBiosciences"><img class="footer-smm-img" src="https://www.tcsbiosciences.co.uk/images/twitter-wht.png" alt="Follow us on Twitter" /></a></li>
+					<li><a href="https://www.linkedin.com/company/tcs-biosciences-ltd"><img class="footer-smm-img" src="https://www.tcsbiosciences.co.uk/images/linked-in-wht.png" alt="Conect with us on Linked-in" /></a></li>
+					<li>
+						<div id="ssl-img" title="Click to verify - this site has chosen a GeoTrust SSL Certificate for web site security">
+						<script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.tcsbiosciences.co.uk&amp;size=S&amp;lang=en"></script><a href="https://sealsplash.geotrust.com/splash?&amp;dn=www.tcsbiosciences.co.uk" tabindex="-1" onmousedown="return gts_mDown(event);" target="GEOTRUST_SSL_Splash"><img name="gts_seal" src="https://seal.geotrust.com/getgeotrustsslseal?at=0&amp;sealid=0&amp;dn=www.tcsbiosciences.co.uk&amp;lang=en&amp;gmtoff=0" oncontextmenu="return false;" alt="Click to Verify - This site has chosen a GeoTrust SSL Certificate to improve Web site security" border="true"></a>
+						<a href="http://www.geotrust.com/ssl/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;"></a></div>
+					</li>
+				</ul>
+				<div class="separator"></div>
+			</div>
+		</div>
+	<div class="spacer"></div>
+	</div><!-- /quicklinks -->
+<div class="separator"></div>
+</div><!-- /quicklinkspanel -->
+<!-- /inc quicklinks -->
+
+</div><!-- /mainbody -->
+
+<!-- inc copyright -->
+<div class="printfooter noscreen" id="printfooter">
+		<p><strong>TCS Biosciences Ltd</strong><br />
+		<strong>t</strong>: +44 (0)1296 714222 &nbsp;&bull;&nbsp; <strong>f</strong>: +44 (0)1296 714806 &nbsp;&bull;&nbsp; <strong>e</strong>: <a href="mailto:sales@tcsgroup.co.uk?subject=From%20the%20TCS%20Biosciences%20website" class="footerlink">sales@tcsgroup.co.uk</a><br />
+		Botolph Claydon, Buckingham, MK18 2LR, United Kingdom</p>
+</div>
+<div class="copyrightpanel" id="copyrightpanel">
+	<div class="webmastercontainer">
+		<div class="webmaster">Design: <a class="whitelink" href="http://www.studioeighty.co.uk/">StudioEighty</a> | Webmaster: <a href="http://www.annwebcom.co.uk/" title="visit the webmaster" class="webmasterlink">AnnWebCom</a></div>
+		<div class="copyright">&copy; Copyright 2001-2020 TCS Biosciences Ltd. - all rights reserved</div>
+		<div class="separator"></div>
+	</div><!-- /webmastercontainer -->
+</div><!-- /webmastercontainer -->
+<!-- /inc copyright -->
+
+<div class="to-top noprint"><img src="https://www.tcsbiosciences.co.uk/images/back-to-top.png" width="32" height="32" alt="back to top" title="scroll to top" /></div>
+
+</body>
+
+
+<!-- Mirrored from www.tcsbiosciences.co.uk/customers/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2020 09:26:53 GMT -->
+</html>

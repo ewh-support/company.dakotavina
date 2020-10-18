@@ -1,0 +1,263 @@
+/* horizontal menu with panel dropdowns */
+
+#menushow, #menuhide { width: 98%; margin: 16px 0; padding: 10px 1%; font-size: 1.3em; color: #ffffff !important; text-decoration: none !important; background: transparent; text-align: center; }
+#menushow:hover, #menuhide:hover { background: rgba(133,133,133,0.66); }
+
+#mainmenu { 
+    width: 100%; clear: both; margin: 0; padding: 0; list-style-type: none; color: #ffffff; background: transparent;
+}
+
+#mainmenu>ul { 
+    display: table; width: 100% !important; padding: 0; margin: 0; border: 0 none; list-style-type: none; position: relative; z-index: 3;
+}
+#mainmenu>ul>li { 
+    vertical-align: middle; font-size: 1.1em; padding: 0; margin: 0; border: 0 none; list-style-type: none; overflow: hidden;
+}
+
+#basketsearch>ul { 
+    display: table; width: 100% !important; padding: 0; margin: 0; border: 0 none; list-style-type: none; position: relative;
+}
+#basketsearch>ul>li { 
+    vertical-align: middle; padding: 4px 0; margin: 0 !important; border: 0 none; list-style-type: none;
+}
+
+#mainmenu>ul>li a { color: #ffffff; text-decoration: none; padding: 0 1%; }
+#mainmenu>ul>li:hover a { color: #ffffff; background: transparent; text-decoration: none;}
+
+li.drop { color: #ffffff; }
+li.drop:hover { color: #ffffff; background: transparent; }
+
+li.drop:hover .dropdown-fullwidth, li.panelmenuon:hover .dropdown-fullwidth { left: -999em; }
+
+a.adrop { font-weight: 200; margin-right: 42px; padding: 9px 0 !important; border-bottom: 3px solid transparent; }
+
+.dropdown-fullwidth { 
+
+	margin: 12px auto;
+	position: absolute;
+	width: 100%; 
+	left: -999em; /* Hides the drop down */
+	text-align:left;
+	padding: 0%;
+	border: 1px #898989 solid;
+	z-index: 9998;
+	background: rgba(255,255,255,1);
+
+    -webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;   
+    -ms-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+
+	/* Gradient background */
+	
+/*	background: #DEDEE6 linear-gradient(to bottom, #DBE5E5 0%, #ffffff 50%, #DBE5E5 100%); */
+
+	/* Rounded Corners */
+
+/* 	border-radius: 5px; */
+
+	/* Shadows */
+
+/*	box-shadow: 3px 3px 3px 0px rgba(164,164,164,0.75); */
+
+}
+
+	.dropdown-fullwidth sup, .dropdown-fullwidth sub {
+	   vertical-align: baseline;
+	   position: relative;
+	   top: -0.4em;
+	   }
+	.dropdown-fullwidth sub { top: 0.4em; }
+
+	.fullwidth-padding { margin: 0 1.5%}
+
+	.menu-fullwidth ul { width: 100%; margin: 5px 0; padding: 0; list-style-type: none; float: left; text-transform: capitalize; }
+	.menu-fullwidth ul li { clear: both; position: relative; font-weight: normal; margin: 3px; padding: 9px 1%; border-bottom: 1px solid #DBE5E5; border-radius: 3px; }
+	.menu-fullwidth ul li:hover { background: #d3d3d3; }
+
+	.menu-fullwidth ul li ul { position: relative; text-align: left; background: #ffffff; margin: 3px 0; padding: 0; border: 2px #d3d3d3 solid; border-radius: 3px; }
+	.menu-fullwidth ul li ul li { font-weight: 200; margin: 1px; padding: 9px 0.75% !important;}
+	.menu-fullwidth ul li ul li:hover { background: #d3d3d3; }
+
+	.menu-fullwidth ul li ul li ul { position: relative; text-align: left; background: #ffffff; margin: 3px 0; padding: 0; border: 0 none; }
+	.menu-fullwidth ul li ul li ul li { font-size: 0.9em; font-weight: 200; margin: 1px; padding: 9px 0.75% 9px 5% !important;}
+	.menu-fullwidth ul li ul li ul li:hover { background: #d3d3d3; }
+
+	.menu-fullwidth a { color: #000000 !important; text-decoration: none; margin-right: 42px; padding: 3px; display: block; }	// margin-right allows for sub-sub-show buttons
+	.menu-fullwidth a:hover { text-decoration: none;}
+
+	.ul-sub-group { display: none; }
+
+	#menushow { display: block; }
+	#menuhide { display: none; }
+
+	.sub-show { float: right; margin-right: 14px; display: inline; width: 42px; height: 18px; background: url('https://www.tcsbiosciences.co.uk/images/menu-pointer-down-wht.png') 5px -3px no-repeat; cursor: pointer; }
+	.sub-hide { float: right; margin-right: 14px; display: inline; width: 42px; height: 18px; background: url('https://www.tcsbiosciences.co.uk/images/menu-pointer-up-wht.png') 5px -3px no-repeat; }
+	.sub-show:hover, .sub-hide:hover { background-position: -27px -3px; }
+
+	.sub-sub-show { float: right; display: inline; width: 42px; height: 100%; background: url('https://www.tcsbiosciences.co.uk/images/menu-pointer-down.png') 5px -3px no-repeat; cursor: pointer; }
+	.sub-sub-hide { float: right; display: inline; width: 42px; height: 100%; background: url('https://www.tcsbiosciences.co.uk/images/menu-pointer-up.png') 5px -3px no-repeat; }
+	.sub-sub-show:hover, .sub-sub-hide:hover { background-position: -27px -3px; }
+
+#header-search { width: 100%; white-space: nowrap; }
+.header-search { color: #ffffff; text-align: right; }
+
+#header-search-wrapper { height: 32px; width: 80%; margin: 0; padding: 0; float: left; text-align: right; vertical-align: middle; overflow: hidden; }
+#search-label { margin: 0; padding: 0; display: table-cell; height: 32px; vertical-align: middle; display: none; }
+#search-field { position: relative; margin: 0; padding: 0 6px; display: table-cell; height: 32px; font-weight: bold; vertical-align: middle; }
+
+.searchinput { float: left; }
+.quick-search-box { }
+.quick-search-button {font-size: 0.9em; margin: 0; padding: 10px 15px 10px 45px; border: 0 none; border-left: 1px solid #ffffff; color: #ffffff; background: #E31110 url('https://www.tcsbiosciences.co.uk/images/details.png') 5px center no-repeat; cursor: pointer;}
+.button_display:hover {background-color: #EB5930;}
+
+#show_search { margin: 0; border: 0 none; cursor: pointer; }
+/* .show_search { background: url('images/pointer-down-header-wht.png') right top no-repeat; } */
+/* .hide_search { background: url('images/pointer-up-header-wht.png') right top no-repeat; } */
+/* #show_search:hover, #hide_search:hover { background-position: right -32px; } */
+
+#advanced-search-panel { position: absolute; width: 96%; max-width: 400px; top: 91px; right: 0; z-index: 9999; padding: 5px; background: rgba(255,255,255,0.85); color: #333333; text-align: left; border: 2.5px #EB5930 solid; border-radius: 3px; display: none;}
+#advanced-search-close { position: absolute; top: 3px; right: 3px; z-index: 300; cursor: pointer; width: 32px; height: 32px; background: transparent url('https://www.tcsbiosciences.co.uk/images/basket_close_cross-wht.png') right top no-repeat; }
+#advanced-search-close:hover { background-position: right -32px; }
+#advanced-search-top { font-weight: bold; color: #333333; }
+#advanced-search-top p { margin: 0; padding: 6px 0; }
+#search-type { }
+#search-discounted { display: none; }
+#search-fulldesc { }
+#search-brand { clear: both; }
+
+#header-basket { width: 100%; white-space: nowrap; text-align: center; }
+.header-basket { color: #ffffff; display: inline-block; margin: 0 auto;}
+
+#basket-label { display: none; margin: 0; padding: 5px 9px 0 0; vertical-align: middle; }
+
+#basket_button { display: none; height: 32px; width: 32px; padding: 0; margin: 0; border: 0 none; background: url('https://www.tcsbiosciences.co.uk/images/basket_button-wht.png') right top no-repeat; cursor: pointer;}
+#basket_button:hover { background-position: right -32px; }
+
+#basket-count { display: none; }
+
+#show_basket { cursor: pointer; }
+/* .show_basket { background: url('images/pointer-down-header-wht.png') right top no-repeat; } */
+/* .hide_basket { background: url('images/pointer-up-header-wht.png') right top no-repeat; } */
+/* #show_basket:hover, #hide_basket:hover { background-position: right -32px; } */
+
+#basket-summary-panel { position: absolute; width: 96%; max-width: 400px; top: 91px; left: 0; z-index: 9999; min-height: 35px; padding: 5px; background: rgba(255,255,255,0.85); color: #333333; text-align: left; border: 2.5px #EB5930 solid; border-radius: 3px; display: none;}
+#basket-summary-close { position: absolute; top: 3px; right: 3px; z-index: 300; cursor: pointer; width: 32px; height: 32px; background: transparent url('https://www.tcsbiosciences.co.uk/images/basket_close_cross-wht.png') right top no-repeat; }
+#basket-summary-close:hover { background-position: right -32px; }
+#basket_summary { text-transform: none; white-space: normal; }
+#basket_summary a { color: #4E6D8A; text-decoration: none; font-weight: normal; }
+#basket_summary a:visited { color: #4E6D8A; text-decoration: none; font-weight: normal; }
+#basket_summary a:hover { color: #4E6D8A; text-decoration: underline; font-weight: normal; }
+#basket_summary a:active { color: #4E6D8A; text-decoration: underline; font-weight: normal; }
+#basket_summary_top { font-weight: bold; color: #333333; }
+#basket_summary_top p { margin: 0; padding: 6px 0;}
+#basket_subtotal { color: #C9D2DD; background: #4E6D8A; font-weight: bold; text-align: center; padding: 9px; }
+.dec32 { padding: 0 5px; height: 32px; width: 32px; background: url('https://www.tcsbiosciences.co.uk/images/sprite-cross-plus-minus.png') -84px 0 no-repeat; display: table-cell; cursor: pointer;}
+.inc32 { padding: 0 5px; height: 32px; width: 32px; background: url('https://www.tcsbiosciences.co.uk/images/sprite-cross-plus-minus.png') -42px 0 no-repeat; display: table-cell; cursor: pointer; }
+.del32 { padding: 0 5px; height: 32px; width: 32px; background: url('https://www.tcsbiosciences.co.uk/images/sprite-cross-plus-minus.png') 0 0 no-repeat; display: table-cell; cursor: pointer; }
+.dec32:hover { background-position: -84px -52px; }
+.inc32:hover { background-position: -42px -52px; }
+.del32:hover { background-position: 0 -52px; }
+
+.panelmenuon a.adrop { border-bottom: 3px solid #E21013; }
+.panelclinicalon a.adrop { border-bottom: 3px solid #E21013; } /* #00508A */
+.panelpharmaon a.adrop { border-bottom: 3px solid #E21013; } /* #F99C10 */
+.panelfoodon a.adrop { border-bottom: 3px solid #E21013; } /* #35A63E */
+.panelwateron a.adrop { border-bottom: 3px solid #E21013; } /* #00B6F0 */
+.panelcontracton a.adrop { border-bottom: 3px solid #E21013; }
+
+/* Responsive Web Design Styles */
+
+/* mobile styles */
+
+	#mainmenu { display: none; }
+
+/* First breakpoint at 600px */
+/* Inherits mobile styles, these styles are for mid-sized viewports... */
+
+@media all and ( min-width: 600px ){ 
+
+	#mainmenu { display: block; margin: 10px 0; padding: 0; }
+
+	#mainmenu>ul>li ,#basketsearch>ul>li {
+    	width: auto;
+    	display: table-cell;
+    	text-align: center; 
+    	padding: 13px .5%;
+    	font-size: 0.9em;
+    }
+
+ 	#mainmenu>ul>li a { padding-left: 2%; }
+
+	#menushow { display: none; }
+	#menuhide { display: none; }
+
+	.sub-show { display: none; }
+
+	a.adrop { margin-right: 0; }
+
+/*  place the next three lines in the first @media breakpoint that you want to enable the full-width dropdown menus */
+/*  #mainmenu ul li ul { display: block; } dropdown menus visible */
+	li.drop:hover .dropdown-fullwidth { left: -1px; } /* dropdown menus are shown if viewport is wide enough by default */
+
+	.dropdown-fullwidth { }
+
+	.menu-fullwidth { width: 100%; background: rgba(255,255,255,0.85); }
+
+	.menu-fullwidth ul .li-group { clear: right; width: 45%; float: left; margin-right: 2%; }
+	.menu-fullwidth ul .li-group-wide { clear: right; width: 92%; float: left; margin-right: 2%; }
+
+	.menu-fullwidth ul li ul { position: absolute; top: 80%; left: 0; z-index: 999; }
+
+	#basket-label { padding: 5px 9px 0 18px; }
+
+	#basketsearch>ul>li { width: 50% !important; }
+	#basket-summary-panel { top: 34px; }
+	#advanced-search-panel { top: 34px; }
+
+/* add more styles for mid-sized viewports here... */
+
+}
+
+/* Second breakpoint at 799px */
+/* Inherits mobile styles and mid-sized viewport styles, these styles are for larger viewports... */
+
+@media all and (min-width: 799px){ 
+
+/*  place the next line in the first @media breakpoint that you want to enable the sub-group dropdown menus on hover */
+/*  #prodmenu .li-group:hover .ul-sub-group { display: block;} */
+
+/* add more styles for larger viewports here... */
+
+}
+
+/* Third breakpoint at 1000px */
+/* Inherits mobile styles and mid-sized viewport styles, these styles are for larger viewports... */
+
+@media all and (min-width: 1000px){
+
+	#mainmenu { width: auto; width: 100%; margin: 20px 0; clear: both; }
+
+	#mainmenu ul { float:right;	}
+	
+	#mainmenu>ul>li { }
+
+/*	.menu-fullwidth { min-height: 500px; } */
+
+	.menu-fullwidth ul .li-group { }
+
+/* add more styles for largest viewports here... */
+
+}
+
+@media all and (min-width: 1200px){
+
+	#mainmenu { width: auto; min-width: 950px; margin: 20px 0; clear: right; float: right; }
+
+	#mainmenu>ul {} 
+	#basketsearch>ul {} 
+
+/* add more styles for very, very large viewports here... */
+
+}

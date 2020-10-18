@@ -1,0 +1,33 @@
+/* --- Accordion --- */
+
+.js #accordion .accordion { visibility: hidden; }
+
+#accordion ul { list-style-type: none; margin: 0; padding-left: 0 !important; }
+
+.accordion { margin: 0; padding: 0; }
+
+.accordion .outer { background: #ffffff; }
+
+.accordion .inner { margin-bottom: 0; padding: .5em 20px 1em 10px; position: relative; overflow: hidden; }
+
+.accordion .inner .inner { background: #FEF4F0; margin: 0; padding: .5em; border-radius: 9px; }
+
+.h { border-radius: 9px; }
+
+.accordion h3 { color: #333333; display: block; }
+
+.accordion p { margin: .5em 1px 1em; padding: .5em 1px 1em; }
+
+a.trigger { display:block; background-image: url('https://www.tcsbiosciences.co.uk/images/arrow-down.png'); background-repeat: no-repeat; background-position: right 50%; font-weight: 700; text-decoration: none; }
+
+a.trigger.open { background-image: url('https://www.tcsbiosciences.co.uk/images/arrow-up.png'); }
+
+a.trigger:hover { text-decoration: none; }
+
+.last-child a.trigger{ padding-left: 1px; background-image: none; font-weight: normal; }
+
+#accordion a.trigger { color: #333333; background-color: #FEECE6; padding: .5em 60px .5em .25em; border-radius: 9px; }
+
+#accordion a.trigger.open { color: #333333; background-color: #FEECE6; padding: .5em 60px .5em .25em; border-radius: 9px; }
+
+#accordion a:hover.trigger.open, #accordion a:focus.trigger.open, #accordion a:active.trigger.open { border-color: #bcd;}
