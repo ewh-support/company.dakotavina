@@ -1205,7 +1205,7 @@ iframe {border: 0 none; margin: 0; padding: 0; overflow: auto;}
 .twittercontainer { background: #ffffff; }
 .twitter-panel { width: 100%; background: #D8DFEC; }
 #tcs-twitter-img { position: relative; height: 160px; }
-#tcs-twitter-img img { position: absolute; top: +10px; left: 50%; margin-left: -110px; z-index: 100; width: 222px; height: auto px;  }
+#tcs-twitter-img img { position: absolute; top: +80px; left: 50%; margin-left: -110px; z-index: 100; width: 222px; height: auto px;  }
 #tcs-twitter { height: 95px; background: #D8DFEC; overflow: hidden; }
 #tcs-twitter iframe { margin: 0 auto !important; }
 .follow-button
@@ -1928,7 +1928,7 @@ h2 {border-bottom-width: 3px;}
 
 .slide-title { font-size: 1.2em; }
 
-.twitter-panel { height: 160px; border-bottom: 35px solid #ffffff; border-top: 60px solid #ffffff; }
+.twitter-panel { height: 300px; border-bottom: 35px solid #ffffff; border-top: 60px solid #ffffff; }
 #homebody .twitter-panel { border-top-width: 0; }
 #tcs-twitter { padding-top: 30px; }
 .follow-button { margin: 45px auto; }
