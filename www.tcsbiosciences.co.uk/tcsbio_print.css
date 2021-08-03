@@ -26,7 +26,7 @@ body { background: #ffffff !important; }
 
 .header-phone a { color: #ababab !important; padding: 7px; }
 
-.parallax-window { height: 110px !important; overflow: hidden; background-color: #ffffff; background-image: url('https://www.tcsbiosciences.co.uk/images/clinical.jpg'); background-attachment: initial; background-position: center center; background-size:cover; }
+.parallax-window { height: 110px !important; overflow: hidden; background-color: #ffffff; background-image: url('images/clinical.jpg'); background-attachment: initial; background-position: center center; background-size:cover; }
 
 .parallax-mirror, .parallax-slider { display: none !important; }
 
